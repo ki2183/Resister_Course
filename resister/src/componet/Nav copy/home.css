@@ -1,0 +1,23 @@
+:root{
+    --pc : #1c1729;
+}
+
+.container-home{
+    width: 800px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ------------------------------------ */
+/* Inithome */
+.container-inithome{
+
+}
+/* ------------------------------------ */
+/* TestNav */
+.container-nav{
+    position: static;
+    width: 100vw;
+    height: 150px;
+    background-color:var(--pc) ;
+}

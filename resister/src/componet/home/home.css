@@ -1,0 +1,61 @@
+:root{
+    --pc : #1c1729;
+    --cr : #FEFFED;
+}
+
+.container-home{
+    width: 800px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ------------------------------------ */
+/* Inithome */
+.container-inithome{
+    margin-top: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inithome-h1{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    margin-bottom:35px;
+}
+
+.inithome-button{
+    margin-top: 10px;
+    width: 120px;
+    height: 40px;
+}
+
+.init-div{
+    margin-top: 70px;
+}
+.init-h3{
+    display: inline;
+    margin:0;
+}
+.init-a{
+    display: inline;
+}
+#login-button{
+    border: none;
+    background-color:var(--pc);
+    color:var(--cr);
+    font-size: 16px;
+    font-weight: bold;
+}
+#nologin-button{
+    border: none;
+    background-color:#858585;
+    color:var(--pc);
+    font-size: 16px;
+    font-weight: bold;
+}
