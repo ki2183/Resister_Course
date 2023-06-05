@@ -1,0 +1,22 @@
+:root{
+    --pc : #1c1729;
+    --cr : #FEFFED;
+    --gr : #858585;
+}
+
+.container-main{
+    width: 100vw;
+    height:15vh;
+}
+.container-main-menu{
+    margin-top:15vh;
+    width: 100%;
+    height: 50vh;
+}
+.menu-content{
+}
+.menu-content-img{
+}
+.menu-content-p{
+}
+
