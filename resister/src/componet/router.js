@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from './home/home';
-import Nav from './Nav/nav';
+import Nav from './nav/nav';
 import Login from './user/login/Login'
 import Usersave from './user/usersave/Usersave';
 import Main from './main/main';
