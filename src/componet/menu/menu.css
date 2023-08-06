@@ -1,0 +1,39 @@
+.container-menu{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-menubanner{
+    /* margin-top: 150px; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    width: 1300px;
+    height: 800px;
+    border: 1px solid #666666;
+}
+
+
+/* ------------------MENUBANNER------------------------ */
+.menubanner{
+    width: 500px;
+    height: 800px;
+    border-right: 1px solid #666666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+}
+.menubanner-content{
+    width: 450px;
+    height: 230px;
+    box-shadow: 1px 1px 5px #666666;
+}
+/* -------------------MENUCONTENT----------------------- */
+.meuucontent{
+
+}

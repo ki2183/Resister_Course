@@ -1,0 +1,40 @@
+{
+    "data":[
+        {
+            "quesiton" : "본인은 이 과목에 어느정도 관심이 있으십니까?",
+            "type": "score",
+            "score" : 0 
+        },
+        {
+            "quesiton" : "본인은 이 과목에 어느정도 관심이 있으십니까?",
+            "type": "score",
+            "score" : 0 
+        },
+        {
+            "quesiton" : "본인은 이 과목에 어느정도 관심이 있으십니까?",
+            "type": "score",
+            "score" : 0 
+        },
+
+        {
+            "quesiton" : "본인은 이 과목에 어느정도 관심이 있으십니까?",
+            "type": "score",
+            "score" : 0 
+        },
+        {
+            "quesiton" : "본인은 이 과목에 어느정도 관심이 있으십니까?",
+            "type": "score",
+            "score" : 0 
+        },
+        {
+            "quesiton" : "본인은 이 과목에 어느정도 관심이 있으십니까?",
+            "type": "score",
+            "score" : 0 
+        },
+        {
+            "quesiton" : "체육 좋아함?",
+            "type": "tf",
+            "tf" : "false"
+        }
+    ]
+}
