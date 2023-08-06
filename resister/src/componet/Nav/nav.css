@@ -5,8 +5,10 @@
 /* ------------------------------------ */
 /* TestNav */
 .container-nav{
-    position: static;
+    position: fixed;
+    top: 0;
     width: 100vw;
     height: 80px;
     background-color:var(--pc) ;
+    z-index: 30;
 }

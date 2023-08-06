@@ -3,48 +3,68 @@
    --cr : #FEFFED;
    --gr : #858585;
 }
-
+.login-view{
+   margin-top: auto;
+   /* margin-bottom: auto; */
+   width: 450px;
+   height: 245px;
+   overflow: hidden;
+   box-shadow: 1px 1px 4px #66666673;
+}
 .container-login{
    width: 100%;
-   height: 800px;
+   height: 59vh;
    display: flex;
    align-items: center;
    justify-content: center;
+
 }
 .login-case{
    display: flex;
-   margin-top:100px ;
-   width: 400px;
-   height: 700px;
+   /* margin-top:100px ; */
+   width: 900px;
+   height: 300px;
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
-   border-radius: 15px;
+   justify-content: start;
    gap: 2px;
-
+}
+.login-case>p{
+   margin-top: 15px;
+   margin-right: auto;
+   margin-left: 45px;
 }
 #login-title{
    display: flex;
-   flex-direction: column;
-   align-items: center;
-   height: 20%;
-   width: 100%;
-   margin: 20px;
+   flex-direction: row;
+   align-items: start;
+   justify-content: space-between;
+   width: 900px;
+   margin-top: 30px;
+   
 }
-#login-title>h1,#login-title>p{
+#login-title>h2:nth-child(1){
    padding: none;
    margin: 0;
+   margin-left:45px;
+   margin-bottom: 8px;
+}
+#login-title>h2:nth-child(2){
+   padding: none;
+   margin: 0;
+   margin-right:325px;
 }
 #login-title>p>a{
    color: var(--ps);
 }
 #login-frame{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    align-items: center;
-   height: 70%;
-   width: 100%;
+   height: 30%;
+   width: 900px;
+   margin-top: 10px;
 }
 #login-option{
    display: flex;
@@ -55,42 +75,40 @@
 }
 #login-frame>div{
    width: 100%;
-   height: 120px;
+   height: 100px;
    margin-bottom: 0px;
    display: flex;
    flex-direction: column;
+   justify-content: start;
 
 }
 #login-frame>div>input[type=id],#login-frame>div>input[type=password]{
-   background-color: rgb(238, 232, 225);
+   border: none;
+   border-bottom: 2px solid #1c1729;
    width: 350px;
    height: 40px;
    outline: 1px;
-   border: none;
-   border-radius: 9px;
-   margin-top:10px;
-   margin-bottom:10px;
+   /* margin-top:10px;
+   margin-bottom:10px; */
    margin-right: auto;
    margin-left: auto;
    padding-left: 10px;
+   font-size: 16px;
+
 }
 #login-frame>div>label{
    margin-left: 20px;
    font-size: 16px;
 }
-.err_m{
-   margin-left: 15px;
-   color: rgb(253, 58, 58);
-   font-weight: bold;
-}
 #login-frame>div>input[type=id]:focus,#login-frame>div>input[type=password]:focus{
-   border: 3px solid var(--pc);
+   
 }
 .login-button{
    margin-top: 20px;
    border: none;
    background-color: #666;
-   border-radius: 30px;
+   box-shadow: 2px 2px 4px #0000006f;
+   border-radius: 3px;
    width: 370px;
    height: 45px;
    font-size: 20px;
@@ -121,4 +139,38 @@
 
 .login-button:first-child:hover{
    font-size: 18px;
+}
+.err_m_login{
+   margin-top: 5px;
+   margin-left: 45px;
+   color: red;
+}
+
+
+
+
+/* ---------------------buttonframe-------- */
+.login-fst-button-frame{
+   /* background-color: #858585; */
+   width: 350px;
+   height: 30px;
+   margin-left: auto;
+   margin-right:auto;
+   margin-top: 15px;
+   display: flex;
+   justify-content: end;
+   align-items: center;
+   gap: 10px;
+   border: none;
+}
+.login-button-child{
+   width: 80px;
+   height: 30px;
+   margin: none;
+   border-radius: 0;
+   border:none
+}
+.login-button-child:nth-child(2){
+   background-color: #1c1729;
+   color: antiquewhite;
 }

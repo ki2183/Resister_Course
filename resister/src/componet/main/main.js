@@ -1,4 +1,4 @@
-import { useState } from "react"
+// import { useState } from "react"
 import "./main.css"
 import { gsap } from "gsap"
 function Content(probs){
@@ -44,18 +44,18 @@ function MainMenu(){
             name : "시간표 만들기",
             intro: "질문을 통해서 자동으로 시간표를 만들 수 있습니다.",
             imgurl : "",
-            link:"/",
+            link:"/question",
             num:"03"
         },
     ]
 
 
     const onEnter = ({ currentTarget }) => {
-        gsap.to(currentTarget, { scale: 1.05 });
+        gsap.to(currentTarget, { scale: 1.03,duration:0.2});
       };
       
       const onLeave = ({ currentTarget }) => {
-        gsap.to(currentTarget, { scale: 1 });
+        gsap.to(currentTarget, { scale: 1 ,duration:0.2});
       };
 
     return <div className="container-main-menu">

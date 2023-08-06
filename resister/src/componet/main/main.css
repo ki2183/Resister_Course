@@ -6,15 +6,16 @@
 }
 
 .container-main{
+    padding-top: 11vh;
     width: 100vw;
-    height:15vh;
+    height:50vh;
 }
 .container-main-menu{
-    margin-top:15px;
+    /* margin-top:11vh; */
     width: 100vw;
     height: 50vw;
 
-    background-color: var(--gr);
+    /* background-color: var(--gr); */
     display: flex;
     flex-direction: row;
 
@@ -29,9 +30,10 @@
 .menu-content{
     width: 30vw;
     height: var(--contentHeight);
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(244, 244, 244);
     display: flex;
     flex-direction: column;
+    box-shadow: 2px 2px 4px #0000006f;
 }
 .menu-content:hover{
     cursor: pointer;

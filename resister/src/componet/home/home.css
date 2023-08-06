@@ -9,6 +9,7 @@
     height:60vh;
     margin-left: auto;
     margin-right: auto;
+
 }
 /* ------------------------------------ */
 /* Inithome */
@@ -52,6 +53,7 @@
 #login-button{
     border: none;
     background-color:var(--pc);
+    box-shadow: 2px 2px 4px #0000006f;
     color:antiquewhite;
     font-size: 16px;
     font-weight: bold;
@@ -64,6 +66,7 @@
     font-size: 16px;
     font-weight: bold;
     transition: all 0.1s;
+    box-shadow: 2px 2px 4px #0000006f;
 }
 
 #login-button:hover{
