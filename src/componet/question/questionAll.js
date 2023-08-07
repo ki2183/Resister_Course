@@ -13,7 +13,7 @@ import { useForm } from 'react-hook-form';
 // https://kr.freepik.com/icon/%25ED%258F%25B4%25EB%258D%2594_7094763#position=28&fromView=resource_detail
 function QuestionAll(probs){
 
-    const { register, handleSubmit, watch ,formState: { isDirty, errors }, } = useForm({});
+    const { handleSubmit, control } = useForm();
 
     const forbiddenRef = useRef(null)
     const handRef = useRef(null)
@@ -69,6 +69,7 @@ function QuestionAll(probs){
     const Allrest_Click = (day) =>{
         const TLTF_ = [...TLTF]
         const Allrest_ = [...Allrest]
+        const morningRest_ = [...morningRest]
 
         Allrest_[day] = !Allrest_[day] 
 
@@ -77,8 +78,14 @@ function QuestionAll(probs){
                 TLTF_[i][day] = true
             }
         }else{
-            for(let i=0; i<6; i++){
-                TLTF_[i][day] = false
+            if(morningRest_[day]===false){
+                for(let i=0; i<6; i++){
+                    TLTF_[i][day] = false
+                }   
+            }else{
+                for(let i=2; i<6; i++){
+                    TLTF_[i][day] = false
+                }   
             }
         }
         setAllrest(Allrest_)
@@ -136,11 +143,19 @@ function QuestionAll(probs){
                 morningRestCSS_.push("check_no")
             }
         }
-
-        setAllrestCSS(AllrestCSS_)
         setMorningRestCSS(morningRestCSS_)
+        setAllrestCSS(AllrestCSS_)
+        
     },[Allrest,morningRest])
     
+    const onSubmit = async (dt,event) => {
+        event.preventDefault(); // 폼 제출 이벤트의 기본 동작 막기
+        console.log('실행 확인')
+        await new Promise((r) => setTimeout(r, 1000));
+        console.log(JSON.stringify(dt));
+        alert(JSON.stringify(dt));
+      };
+
     return <div>
         
         <div className='title-container-questionAll'>
@@ -168,7 +183,7 @@ function QuestionAll(probs){
                     <div className='menu-content-in-div'></div>
                 </div>
         </div>
-        <form name='this' method='get'>
+        
         <div className='container-questionAll'>
             
             <div className='frame-questionAll'>
@@ -233,11 +248,17 @@ function QuestionAll(probs){
                     </div>
                     
                 </div>
+                <form name='this' method='get' onSubmit={handleSubmit(onSubmit)}>
+                    <MakeQuesitonInput title={'웹에 관심이 있으십니까?'} input_name={'front'} control={control} />
+                    <MakeQuesitonInput title={'서버에 관심이 있으십니까?'} input_name={'back'} control={control} />
+                    <MakeQuesitonInput title={'리액트에 관심이 있으십니까?'} input_name={'react'} control={control} />
+                    <MakeQuesitonInput title={'운동에 관심이 있으십니까?'} input_name={'exercise'} control={control} />
+                    <MakeQuesitonInput title={'음악에 관심이 있으십니까?'} input_name={'music'} control={control} />
+                    <MakeQuesitonInput title={'종교에 관심이 있으십니까?'} input_name={'region'} control={control} />
+                    <MakeQuesitonInput title={'물리에 관심이 있으십니까?'} input_name={'physical'} control={control} />
 
-                <MakeQuesitonInput title={"웹에 관심이 있으십니까?"} input_name={"web"}/>
-                <MakeQuesitonInput title={"서버에 관심이 있으십니까?"} input_name={"data"}/>
-                {/* <MakeQuesitonInput title={"웹에 관심이 있으십니까?"} input_name={"web"}/> */}
-
+                    <input type="submit" onSubmit={e=>{e.preventDefault(); handleSubmit(onSubmit)}} value='가입하기' id="submitButton" />
+                </form>
                 
 
             </div>
@@ -250,7 +271,7 @@ function QuestionAll(probs){
                 </div>
             </div>
         </div>
-        </form>
+        
     </div>
 }
 
