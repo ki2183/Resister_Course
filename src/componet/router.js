@@ -10,6 +10,8 @@ import MainBanner from './Mainbanner/Mainbanner';
 import Menu from './menu/menu';
 import LastQuestion from './lastquestion/lastquestion';
 import QuestionAll from './question/questionAll';
+import Test from './test/test';
+import MakeQuesitonInput from './question/question_input';
 
 function AppRouter(){
     return <BrowserRouter>
@@ -23,6 +25,8 @@ function AppRouter(){
                 <Route path="/question" element={<QuestionAll/>}></Route>
                 <Route path="/mainbanner" element={<MainBanner/>}></Route>
                 <Route path="/lastquestion" element={<LastQuestion/>}></Route>
+                <Route path="/test" element={<Test/>}></Route>
+                <Route path="/test2" element={<MakeQuesitonInput/>}></Route>
                 {/* <Route path="/question2" element={<QuestionAll/>}></Route> */}
             </Routes>
     </BrowserRouter>

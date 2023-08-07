@@ -5,11 +5,15 @@ import clock from './icon/clock2.png'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap"
 import Table_TL from './table'
+import MakeQuesitonInput from './question_input'
+import { useForm } from 'react-hook-form';
 
 // 손아이콘 <a href="https://kr.freepik.com/icon/%EC%86%90_2121078#fromView=search&term=hand&page=1&position=42">Freepik 제작 아이콘</a>
 // 금지아이콘 <a href="https://kr.freepik.com/icon/%EC%86%90_2121078#fromView=search&term=hand&page=1&position=42">Freepik 제작 아이콘</a>
 // https://kr.freepik.com/icon/%25ED%258F%25B4%25EB%258D%2594_7094763#position=28&fromView=resource_detail
 function QuestionAll(probs){
+
+    const { register, handleSubmit, watch ,formState: { isDirty, errors }, } = useForm({});
 
     const forbiddenRef = useRef(null)
     const handRef = useRef(null)
@@ -138,6 +142,7 @@ function QuestionAll(probs){
     },[Allrest,morningRest])
     
     return <div>
+        
         <div className='title-container-questionAll'>
                 <span className='menu-title'>
                     시간표 질문
@@ -163,6 +168,7 @@ function QuestionAll(probs){
                     <div className='menu-content-in-div'></div>
                 </div>
         </div>
+        <form name='this' method='get'>
         <div className='container-questionAll'>
             
             <div className='frame-questionAll'>
@@ -228,95 +234,11 @@ function QuestionAll(probs){
                     
                 </div>
 
+                <MakeQuesitonInput title={"웹에 관심이 있으십니까?"} input_name={"web"}/>
+                <MakeQuesitonInput title={"서버에 관심이 있으십니까?"} input_name={"data"}/>
+                {/* <MakeQuesitonInput title={"웹에 관심이 있으십니까?"} input_name={"web"}/> */}
+
                 
-
-                <div className='card-questionAll'>
-                    <div className='card-question-info'>
-                        <span className='card-question-info-span'>
-                            주기적으로 새로운 친구를 만든다.
-                        </span>
-                        
-                    </div>
-
-                    <div className='card-question-score'>
-                        <span>싫다</span>
-                        <div className='frame-card-question-score'>
-                            <div className='score-radio fstbut'></div>
-                            <div className='score-radio secbut'></div>
-                            <div className='score-radio trdbut'></div>
-                            <div className='score-radio fourthbut'></div>
-                            <div className='score-radio fifthbut'></div>
-                        </div>
-                        <span>좋다</span>
-                    </div>
-                    
-                </div>
-
-                <div className='card-questionAll'>
-                    <div className='card-question-info'>
-                        <span className='card-question-info-span'>
-                            주기적으로 새로운 친구를 만든다.
-                        </span>
-                        
-                    </div>
-
-                    <div className='card-question-score'>
-                        <span>싫다</span>
-                        <div className='frame-card-question-score'>
-                            <div className='score-radio fstbut'></div>
-                            <div className='score-radio secbut'></div>
-                            <div className='score-radio trdbut'></div>
-                            <div className='score-radio fourthbut'></div>
-                            <div className='score-radio fifthbut'></div>
-                        </div>
-                        <span>좋다</span>
-                    </div>
-                    
-                </div>
-
-                <div className='card-questionAll'>
-                    <div className='card-question-info'>
-                        <span className='card-question-info-span'>
-                            주기적으로 새로운 친구를 만든다.
-                        </span>
-                        
-                    </div>
-
-                    <div className='card-question-score'>
-                        <span>싫다</span>
-                        <div className='frame-card-question-score'>
-                            <div className='score-radio fstbut'></div>
-                            <div className='score-radio secbut'></div>
-                            <div className='score-radio trdbut'></div>
-                            <div className='score-radio fourthbut'></div>
-                            <div className='score-radio fifthbut'></div>
-                        </div>
-                        <span>좋다</span>
-                    </div>
-                    
-                </div>
-
-                <div className='card-questionAll'>
-                    <div className='card-question-info'>
-                        <span className='card-question-info-span'>
-                            주기적으로 새로운 친구를 만든다.
-                        </span>
-                        
-                    </div>
-
-                    <div className='card-question-score'>
-                        <span>싫다</span>
-                        <div className='frame-card-question-score'>
-                            <div className='score-radio fstbut'></div>
-                            <div className='score-radio secbut'></div>
-                            <div className='score-radio trdbut'></div>
-                            <div className='score-radio fourthbut'></div>
-                            <div className='score-radio fifthbut'></div>
-                        </div>
-                        <span>좋다</span>
-                    </div>
-                    
-                </div>
 
             </div>
             <div className='questionAll-tl'> 
@@ -328,6 +250,7 @@ function QuestionAll(probs){
                 </div>
             </div>
         </div>
+        </form>
     </div>
 }
 
