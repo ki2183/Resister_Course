@@ -56,12 +56,12 @@ function QuestionAll(probs){
     const [AllrestCSS,setAllrestCSS] =useState(["check_no","check_no","check_no","check_no","check_no"])
     const [morningRestCSS,setMorningRestCSS] =useState(["check_no","check_no","check_no","check_no","check_no"])
     const [TLTF,setTLTF] = useState([
-        [false,false,false,false,false],
-        [false,false,false,false,false],
-        [false,false,false,false,false],
-        [false,false,false,false,false],
-        [false,false,false,false,false],
-        [false,false,false,false,false]
+        [false,false,false,false,false,false],
+        [false,false,false,false,false,false],
+        [false,false,false,false,false,false],
+        [false,false,false,false,false,false],
+        [false,false,false,false,false,false],
+        // [false,false,false,false,false]
     ])
 
     const [TL_View,setTLview] = useState(<Table_TL TLTF={TLTF}/>)
@@ -75,16 +75,16 @@ function QuestionAll(probs){
 
         if(Allrest_[day] == true){
             for(let i=0; i<6; i++){
-                TLTF_[i][day] = true
+                TLTF_[day][i] = true
             }
         }else{
             if(morningRest_[day]===false){
-                for(let i=0; i<6; i++){
-                    TLTF_[i][day] = false
+                for(let i=0; i<7; i++){
+                    TLTF_[day][i] = false
                 }   
             }else{
-                for(let i=2; i<6; i++){
-                    TLTF_[i][day] = false
+                for(let i=2; i<7; i++){
+                    TLTF_[day][i] = false
                 }   
             }
         }
@@ -101,12 +101,12 @@ function QuestionAll(probs){
 
         if(morningRest_[day] == true){
             for(let i=0; i<2; i++){
-                TLTF_[i][day] = true
+                TLTF_[day][i] = true
             }
         }else{
             if(Allrest_[day] == false){
                 for(let i=0; i<2; i++){
-                    TLTF_[i][day] = false
+                    TLTF_[day][i] = false
                 }
             }
         }
@@ -117,8 +117,8 @@ function QuestionAll(probs){
 
     useEffect(()=>{
         console.log(TLTF)
-        console.log(Allrest)
-        console.log(morningRest)
+        // console.log(Allrest)
+        // console.log(morningRest)
         setTLview(<Table_TL TLTF={TLTF}/>)
     },[TLTF])
 

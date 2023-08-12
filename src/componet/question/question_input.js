@@ -14,7 +14,7 @@ function MakeQuesitonInput(probs){
     //     const value = event.target.value;
     //     console.log('선택된 값:', value);
     //   };
-    console.log(control)
+    // console.log(control)
     return (
         <div className='card-questionAll'>
                 <div className='card-question-info'>

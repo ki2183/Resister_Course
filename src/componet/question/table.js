@@ -29,7 +29,7 @@ function Table_TL(probs){
                 }
                 else{
                     let css
-                    !probs.TLTF[i][j-1] ? css='active-day' : css = 'disabled-day'
+                    !probs.TLTF[j-1][i] ? css='active-day' : css = 'disabled-day'
                     TLview_.push(
                         <div key={`${j}day${i}`} className={['view-tl-table', `${css}`].join(' ')}></div>
                     )
