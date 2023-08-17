@@ -1,0 +1,99 @@
+:root{
+    --fst:60px;
+    --sec:45px;
+    --trd:30px;
+}
+
+.label {
+    display: inline-block;
+    border-radius: 500px;
+    transition: all 0.2s;
+    cursor: pointer; 
+}
+
+.outline-span {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input[type='radio'] {
+    opacity: 0;
+    display: none;
+    top: 0;
+    left: 0;
+  }
+
+.first-label{
+    border: 2px solid rgb(14, 129, 223);
+    width: var(--fst);
+    height: var(--fst);
+  }
+  .second-label{
+    border: 2px solid rgb(14, 216, 223);
+    width: var(--sec);
+    height: var(--sec);
+
+  }.third-label{
+    border: 2px solid rgb(14, 223, 174);
+    width: var(--trd);
+    height: var(--trd);
+
+  }.fourth-label{
+    border: 2px solid rgb(126, 223, 14);
+    width: var(--sec);
+    height: var(--sec);
+
+  }.fifth-label{
+    border: 2px solid rgb(223, 157, 14);
+    width: var(--fst);
+    height: var(--fst);
+  }
+
+  /* -------------------------------------------------- */
+
+  .first-label:hover {
+    background-color: rgb(14, 129, 223);
+  }
+  
+
+  .second-label:hover {
+    background-color: rgb(14, 216, 223); 
+  }
+  
+  .third-label:hover {
+    background-color: rgb(14, 223, 174); 
+  }
+  
+  .fourth-label:hover {
+    background-color: rgb(126, 223, 14); 
+  }
+  
+  .fifth-label:hover {
+    background-color: rgb(223, 157, 14);
+  }
+
+
+  /* ------------------------------------------------------------------ */
+
+  input[type='radio']:checked + .first-label {
+    background-color: rgb(14, 129, 223);
+  }
+  
+  input[type='radio']:checked + .second-label {
+    background-color: rgb(14, 216, 223);
+  }
+  
+  input[type='radio']:checked + .third-label {
+    background-color: rgb(14, 223, 174);
+  }
+  
+  input[type='radio']:checked + .fourth-label {
+    background-color: rgb(126, 223, 14);
+  }
+  
+  input[type='radio']:checked + .fifth-label {
+    background-color: rgb(223, 157, 14);
+  }

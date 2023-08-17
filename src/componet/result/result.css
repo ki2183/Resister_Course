@@ -1,0 +1,174 @@
+.container-result{
+    width: 100vw;
+    height: 95vh;
+}
+.container-result-top{
+    width: 1500px;
+    height: 650px;
+    /* border: 1px solid black; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 75px;
+    display: flex;
+
+}
+.container-result-bottom{
+    width: 1500px;
+    height: 200px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.container-result-top-left{
+    height: 100%;
+    width: 70%;
+    border: 1px solid black;
+    border-right:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-result-top-right{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black;
+}
+.cancle-button{
+    position: absolute;
+    transform: translate(250%,-150%);
+    border: none;
+    background-color: #66666627;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px solid #666;
+}
+
+
+/* -------bottom---------- */
+
+.container-result-bottom-in{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.TLITEMS{
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+}
+/* ------timeline----------- */
+.container-result-TL{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-result-TL-before{
+    /* display: none; */
+}
+.frame-reuslt-TL{
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.tl-div{
+    border:0.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* -------------------------------- */
+
+.container-general-class{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+.general-content{
+    width: 90%;
+    height: 70px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.general-content:first-child{
+    margin-top: 20px;
+}
+
+
+
+/* -----modal------ */
+.class-modal{
+    position: absolute;
+    width: 350px;
+    height: 130px;
+    background-color: rgb(239, 243, 245);
+    left: 50%;
+    top:45%;
+    transform: translate(-50%,-50%);
+    border-radius: \2px;
+    border: 2px solid #f1eaea;
+    overflow: hidden;
+    outline: none;
+}
+.class-modal-cancle{
+    width: 100%;
+    height: 30px;
+    background-color: #1c1729;
+    display: flex;
+}
+.class-modal-cancle-button{
+    color: white;
+    font-size: 18px;
+    font-weight:lighter;
+    margin-left: auto;
+    padding-top: 1px;
+    padding-right: 12px;
+    padding-left: 12px;
+    background-color: transparent;
+    cursor: pointer;
+    /* font-family: Georgia, "Times New Roman", serif; */
+    font-weight: lighter;
+
+}
+.class-modal-cancle-button:hover{
+    background-color: rgb(240, 35, 16)   
+}
+.class-modal-info{
+    margin-top: 18px;
+    display: flex;
+    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+}
+.class-modal-YesOrNo{
+    /* margin-top: 15px; */
+    width: 100%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.class-modal-YesOrNo>button{
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+}

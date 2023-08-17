@@ -1,0 +1,144 @@
+:root{
+    --pc : #1c1729;
+    --cr : #FEFFED;
+    --gr : #858585;
+    /* --contentHeight : 45vw; */
+}
+
+.container-main{
+    padding-top: 60px;
+    width: 100vw;
+    height:90vh;
+    background-color: #1c1729f4;
+    
+}
+
+.container-main-menu{
+    /* margin-top:11vh; */
+    width: 100vw;
+    height: 500px;
+
+    /* background-color: var(--gr); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* ----------------------------------------------------------- */
+/* 컨텐츠 */
+
+.menu-content{
+    width: 400px;
+    height:300px;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 4px #0000006f;
+    justify-content: center;
+    gap: 50px;
+}
+.menu-content:hover{
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------- */
+/* 컨텐츠 내부*/
+
+.menu-content-num{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: start;
+    /* border: 1px solid black; */
+    height: 100px;
+}
+.menu-content-number{
+    font-size: 45px;
+    margin-left: 15px;
+}
+.menu-content-p{
+    font-size: 18px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+
+.menu-content-intro{
+    /* height: calc(var(--contentHeight)/6); */
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+}
+.menu-content-intro-p{
+    width: 330px;
+    font-size: 18px;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+
+.menu-content-img{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border: 1px solid black; */
+}
+.menu-content-img-icon{
+    width: 150px;
+    height: 100px;
+    /* border:  1px solid black; */
+}
+.menu-content-img-icon:nth-child(1){
+/* background-color: #1c1729; */
+}
+#출처{
+    position: absolute;
+    bottom: 0;
+    font-size: 5px;
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .container-main{
+        padding-top: 11vh;
+        width: 100vw;
+        height:1500px;
+        background-color: #1c1729f4;
+    }
+
+    .container-main-menu{
+
+        width: 100vw;
+        height: 1200px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    #출처{
+        display: block;
+        position: absolute;
+        font-size: 5px;
+        bottom: -60%;
+    }
+}.container-image-frame{
+    width: 100vw;
+    height:320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
