@@ -1,0 +1,14 @@
+.frame-small-tl{
+    width: 250px;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    border: 1px solid #666;
+}
+.s-tl-item{
+    border: 0.1px solid black;
+}
+.s-tl-true{
+    background-color: #1c1729;
+}

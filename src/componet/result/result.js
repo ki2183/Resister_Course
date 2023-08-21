@@ -8,12 +8,14 @@ import ResultTL from './resultTL';
 import GeneralClass from './generalClass';
 import g_class from './data/generalClass.json'
 import Modal from "react-modal"
-
+import Small_TL_View from './smalltlview';
+import { gsap } from 'gsap';
 
 function Result_Top_Left(probs){
   const [view,setView] = useState(<div className='container-result-TL-before'>컨텐츠를 여기다가 끌어당기세요</div>)
   const [dto,setDTO] = useState({})
   const temp = useRef([]) // 임시 데이터 저장
+  const temp_del = useRef(null)
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const openModal = () => setModalIsOpen(true);
@@ -21,10 +23,11 @@ function Result_Top_Left(probs){
 
   const [Cancle_Modal_Open,setCancle_Modal_Open] = useState(false)
   const openCancleModal = () => setCancle_Modal_Open(true);
-  const closeCancleModal = () => setCancle_Modal_Open(false);
+  const closeCancleModal = () => {setCancle_Modal_Open(false); temp_del.current = null}
 
   const [temp_title,setTemp_title]= useState(null)
 
+  
   
   const [,dropRef] = useDrop({
     accept:"ITEM",
@@ -96,11 +99,12 @@ function Result_Top_Left(probs){
       updateDTO.timeline[temp[0]][temp[1]] = "null" //연강이거나 다른날에 강의가 있음
     }
     console.log(dto.timeline[temp[0]][temp[1]])
-    setDTO(updateDTO) // modal을 보여줘서 참이면 업뎃 아니면 냅두기
+    temp_del.current = updateDTO
+    // setDTO(updateDTO) // modal을 보여줘서 참이면 업뎃 아니면 냅두기
     // temp.current = updateDTO
-
-    // openCancleModal()
-  };
+    console.log(temp_del)
+    openCancleModal()
+  };  
 
   const changeDTO = (arr, title_) => { //수업 바꾸기 메소드
     
@@ -137,12 +141,12 @@ function Result_Top_Left(probs){
     temp.current = []
   }
 
-  // const Modal_Cancle_Q_Yes = () => { //수업 바꾸기에 yes를 하면 바꾸고 TEMP에 있던 값 초기화
-  //   console.log(temp.current)
-  //   setDTO(temp.current)
-  //   closeCancleModal()
-  //   // temp.current = []
-  // }
+  const Modal_Cancle_Q_Yes = () => { //수업 바꾸기에 yes를 하면 바꾸고 TEMP에 있던 값 초기화
+    console.log(temp.current)
+    setDTO(temp_del.current)
+    closeCancleModal()
+    // temp_del.current = []
+  }
 
   useEffect(()=>{
     if (Object.keys(dto).length === 0) {
@@ -167,7 +171,7 @@ function Result_Top_Left(probs){
         </div>
       </Modal>
 
-      {/* <Modal className="class-modal" isOpen={Cancle_Modal_Open} onRequestClose={closeCancleModal}>
+      <Modal className="class-modal" isOpen={Cancle_Modal_Open} onRequestClose={closeCancleModal}>
         <div className='class-modal-cancle'><span onClick={closeCancleModal} className='class-modal-cancle-button'>✕</span></div>
         <p className='class-modal-info'>{temp_title}를 삭제하시겠습니까?</p>
         <div className='class-modal-YesOrNo'>
@@ -176,7 +180,7 @@ function Result_Top_Left(probs){
           <button onClick={closeCancleModal}>아니요</button>
           
         </div>
-      </Modal> */}
+      </Modal>
       </div>
   )
 }
@@ -201,11 +205,29 @@ function Result_Bottom(probs){
     setList(list_)
   }
 
+  const [gsapTF,setGsapTF] = useState(false)
+  const smallhandlerRef = useRef(null)
+  const bighandlerRef = useRef(null)
+  const contentRef = useRef(null)
+
+  useEffect(()=>{
+    if(gsapTF===true){
+      gsap.to(smallhandlerRef.current,{height:9, x:0, y:0,duration: 0.5, ease: "easeInOutBounce"})
+      gsap.to(bighandlerRef.current,{height:50, duration: 0.5, ease: "easeInOutBounce"})
+      gsap.to(contentRef.current,{width : 10, height : 10 ,duration: 0.5, ease: "easeInOutBounce"})
+    }else{
+      gsap.to(smallhandlerRef.current,{height:0 ,y:3,duration: 0.5, ease: "easeInOutBounce"})
+      gsap.to(bighandlerRef.current,{height:202.67, duration: 0.5, ease: "easeInOutBounce"})
+      gsap.to(contentRef.current,{width : 300, height : 150 ,duration: 0.5, ease: "easeInOutBounce"})
+    }
+    
+  },[gsapTF])
+
 
   useEffect(()=>{
     const list_ = []
     list.map((item,index)=>{
-      list_.push(<Result_Bottom_Item key={`${index}item`} index={index} item={item} moveItem={moveItem}/>)
+      list_.push(<Result_Bottom_Item contentRef={contentRef} key={`${index}item`} index={index} item={item} moveItem={moveItem}/>)
   })
     setTLview(list_)
     
@@ -215,12 +237,17 @@ function Result_Bottom(probs){
     console.log(data.data)
   },[TLview])
 
-  return <div className='container-result-bottom-in'>
-    {TLview}
+  return <div className='container-result-bottom-in' ref={bighandlerRef} >
+    <div className='export-button'  onClick={e=>{e.preventDefault(); 
+  setGsapTF(!gsapTF)
+  }}><div ref={smallhandlerRef}></div></div>
+    <div className='frame-Tlview'>
+      {TLview}
+    </div>
   </div>
 }
 
-function Result_Bottom_Item({item,index,moveItem}){
+function Result_Bottom_Item({item,index,moveItem,contentRef}){
 
   const [,dragRef] = useDrag({
     type:'ITEM',
@@ -238,8 +265,14 @@ function Result_Bottom_Item({item,index,moveItem}){
     }
   })
 
-  return <div className='TLITEMS' ref={node => dragRef(dropRef(node))}>
+  return <div className='TLITEMS' ref={node => {
+    dragRef(dropRef(node));
+    contentRef.current=node
+    
+  }}>
+  
     {item.title}
+    <Small_TL_View item={item}/>
   </div>
 }
 

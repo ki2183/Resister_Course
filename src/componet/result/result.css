@@ -15,7 +15,7 @@
 .container-result-bottom{
     width: 1500px;
     height: 200px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
@@ -23,16 +23,17 @@
 .container-result-top-left{
     height: 100%;
     width: 70%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-right:none;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1.5px solid #a0a0a0;
 }
 .container-result-top-right{
     height: 100%;
     width: 30%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .cancle-button{
     position: absolute;
@@ -42,7 +43,21 @@
     border-radius: 2px;
     box-shadow: 2px 2px 2px solid #666;
 }
-
+.export-button{
+    width: 9px;
+    height: 9px;
+    margin-left: 5px;
+    margin-top: 5px;
+    top: 75.5%;
+    left: 5.2%;
+    cursor: pointer;
+}
+.export-button>div{
+    border: 1.5px solid #666;
+    width: 9px;
+    height: 9px;
+    border: 1.5px solid #666;
+}
 
 /* -------bottom---------- */
 
@@ -50,10 +65,20 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    border: 1.5px solid #a0a0a0;
+    /* overflow: hidden; */
+
+}
+.frame-Tlview{
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
 }
 .TLITEMS{
     width: 300px;
@@ -68,17 +93,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
-.container-result-TL-before{
-    /* display: none; */
-}
+
 .frame-reuslt-TL{
     width: 800px;
-    height: 600px;
+    height: 500px;
     border: 1px solid black;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .tl-div{
     border:0.5px solid black;
@@ -86,8 +110,15 @@
     align-items: center;
     justify-content: center;
 }
-
-
+.tl-day{
+    font-size: 11px;
+}
+.container-result-title{
+    /* background-color: #1c1729; */
+    margin-right: auto;
+    margin-left: 120px;
+    font-size: 30px;
+}
 /* -------------------------------- */
 
 .container-general-class{
@@ -143,7 +174,6 @@
     padding-left: 12px;
     background-color: transparent;
     cursor: pointer;
-    /* font-family: Georgia, "Times New Roman", serif; */
     font-weight: lighter;
 
 }

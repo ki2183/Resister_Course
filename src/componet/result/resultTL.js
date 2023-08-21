@@ -20,7 +20,7 @@ function THISTIMELINE({TLdata,changeDTO,deleteThis}){
     useEffect(()=>{
 
         const view_ = []
-        view_.push(<div key="thisone" className="tl-div"></div>) //빈칸
+        view_.push(<div key="thisone" className="tl-div tl-day"></div>) //빈칸
         day.map((item,index)=>{
             view_.push(<div key={`${index}item__`} className="tl-div tl-day">{item}</div>)
         })
@@ -62,7 +62,7 @@ export default function ResultTL(probs){
     const TLdata = probs.dto.timeline
 
     return <div className="container-result-TL">
-        <div><span>{title}</span></div>
+        <div className="container-result-title"><span>{title}</span></div>
         <THISTIMELINE TLdata={TLdata} changeDTO={probs.changeDTO} deleteThis={probs.deleteThis}/>
     </div>
 }
