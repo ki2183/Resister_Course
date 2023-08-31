@@ -1,8 +1,10 @@
 import { useState } from "react"
+import { useRef } from "react"
 import { useEffect } from "react"
 import { useDrag, useDrop } from "react-dnd"
+import { gsap } from "gsap"
 
-export default function GeneralClass({g_class}){
+export default function GeneralClass({g_class,gsapTF}){
     const [dto,setDto] = useState(g_class.data)
     const [content,setContent] = useState([])
     const moveItem = (fromIndex,toIndex) =>{
@@ -14,6 +16,7 @@ export default function GeneralClass({g_class}){
 
 
     useEffect(()=>{
+        const timeline = gsap.timeline();
         const content_ = []
         dto.map((item,index)=>{
             content_.push(<GeneralClass_Content item={item} index={index} moveItem={moveItem}/>)
@@ -21,8 +24,26 @@ export default function GeneralClass({g_class}){
         setContent(content_)
     },[dto])
 
-    return <div className="container-general-class">
+    const rightRef = useRef(null)
+
+        useEffect(()=>{
+            console.log(gsapTF)
+            const timeline = gsap.timeline();
+            
+            if(gsapTF===true){
+            // gsap.to(rightRef.current,{height: 745, marginLeft:15, duration: 0.2, ease: "easeInOutBounce"})
+            gsap.timeline()
+          .to(rightRef.current, {height :650,marginLeft:45,duration: 0, ease: "easeInOutBounce" })
+          .to(rightRef.current, {height: 745, marginLeft:15, duration: 0.5, ease: "easeInOutBounce"}, "+=0.3")
+            }else{
+            gsap.to(rightRef.current,{height :650,marginLeft:45,duration: 0.5, ease: "easeInOutBounce"})
+            }
+    },[gsapTF])
+
+    return <div className="container-general-class" ref={rightRef}>
+        <div className="restore-button"><button>저장</button></div>
         {content}
+        
     </div>
 }
 

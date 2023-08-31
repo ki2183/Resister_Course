@@ -170,7 +170,7 @@ function QuestionAll(probs){
         await new Promise((r) => setTimeout(r, 1000));
         console.log(JSON.stringify(dt));
         alert(JSON.stringify(dt));
-        window.location.href="/test2"
+        window.location.href="/result"
       };
 
     return <div>

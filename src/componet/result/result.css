@@ -10,6 +10,8 @@
     margin-right: auto;
     padding-top: 75px;
     display: flex;
+    /* gap: 30px; */
+    /* background-color: #1c1729; */
 
 }
 .container-result-bottom{
@@ -22,18 +24,22 @@
 }
 .container-result-top-left{
     height: 100%;
-    width: 70%;
+    width: 1050px;
     /* border: 1px solid black; */
     border-right:none;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1.5px solid #a0a0a0;
+    border: 1.5px solid #a0a0a04d;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px #a0a0a0;
+    
 }
 .container-result-top-right{
     height: 100%;
-    width: 30%;
+    width: 450px;
     /* border: 1px solid black; */
+    position: relative;
 }
 .cancle-button{
     position: absolute;
@@ -42,6 +48,7 @@
     background-color: #66666627;
     border-radius: 2px;
     box-shadow: 2px 2px 2px solid #666;
+    
 }
 .export-button{
     width: 9px;
@@ -68,8 +75,9 @@
     flex-direction: column;
     /* justify-content: space-around; */
     /* align-items: center; */
-    border: 1.5px solid #a0a0a0;
-    /* overflow: hidden; */
+    border: 1.5px solid #a0a0a04d;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px #a0a0a0;
 
 }
 .frame-Tlview{
@@ -83,7 +91,7 @@
 .TLITEMS{
     width: 300px;
     height: 150px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 /* ------timeline----------- */
 .container-result-TL{
@@ -119,27 +127,69 @@
     margin-left: 120px;
     font-size: 30px;
 }
+
+
 /* -------------------------------- */
 
 .container-general-class{
-    width: 100%;
-    height: 100%;
-    display: flex;
+    width: 90%;
+    /* height: 650px; */
+    height: 745px;
+    /* display: flex; */
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    border: 1.5px solid #a0a0a04d;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px #a0a0a0;
+    /* margin-left: 45px; */
+    margin-left: 15px;
+    /* position: absolute; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+
 }
 .general-content{
     width: 90%;
     height: 70px;
-    border: 1px solid black;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    border: 1.5px solid #a0a0a04d;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px #a0a0a0;
 }
-.general-content:first-child{
-    margin-top: 20px;
+.general-content:nth-child(2){
+    margin-top: 50px;
+}
+
+
+.restore-button{
+    position: absolute;
+    width:85%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* margin-right: 40px; */
+    
+}
+.restore-button>button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #1c1729;
+    color: antiquewhite;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px #a0a0a0;
+    margin-right: 12px;
 }
 
 

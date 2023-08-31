@@ -1,10 +1,13 @@
 import { useEffect } from "react"
 import "./smalltlview.css"
 import { useState } from "react"
+import { useRef } from "react"
+import { gsap } from "gsap"
 
-export default function Small_TL_View({item}){
+export default function Small_TL_View({item,gsapTF}){
 
     const [tlview,setTlview] = useState([])
+    const contentREF = useRef(null)
 
     useEffect(()=>{
         const tl = item.timeline
@@ -43,8 +46,18 @@ export default function Small_TL_View({item}){
 
     },[])
 
+    useEffect(()=>{
+        console.log(gsapTF)
+        if(gsapTF===true){
+          gsap.to(contentREF.current,{width : 50,  height : 30 ,justifyContent:'start',duration: 0.2, ease: "easeInOutBounce"})
+        }else{
+          gsap.timeline().to(contentREF.current,{width : 50,  height : 30 ,justifyContent:'start',duration: 0.4, ease: "easeInOutBounce"})
+          .to(contentREF.current,{width : 300, height : 125,justifyContent: 'space-around',gap: 30 ,duration: 0.4, ease: "easeInOutBounce"})
+        }
+      },[gsapTF])
+
     return (
-        <div className="frame-small-tl" onClick={e=>{e.preventDefault(); console.log(item)}}>
+        <div className="frame-small-tl" ref={contentREF} onClick={e=>{e.preventDefault(); console.log(item)}}>
             {tlview}
         </div>
     )

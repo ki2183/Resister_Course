@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './router.css'
 
 import Home from './home/home';
 import Nav from './nav/nav';
 import Login from './user/login/Login'
 import Usersave from './user/usersave/Usersave';
 import Main from './main/main';
-// import Question from './question/question';
 import MainBanner from './Mainbanner/Mainbanner';
 import Menu from './menu/menu';
 import LastQuestion from './lastquestion/lastquestion';
@@ -13,21 +13,67 @@ import QuestionAll from './question/questionAll';
 import Test from './test/test';
 import MakeQuesitonInput from './question/question_input';
 import Result from './result/result';
+import List from './list/list';
+import Load from './load.js/load';
+
+function MAINBANNER(probs){
+    return <div>
+        <Nav/>
+        <MainBanner/>
+    </div>
+}
+
+function USERSAVE(probs){
+    return <div>
+        <Nav/>
+        <Usersave/>
+    </div>
+}
+function LOGIN(probs){
+    return <div>
+        <Nav/>
+        <Login/>
+    </div>
+}
+function MAIN(probs){
+    return <div>
+        <Nav/>
+        <Main/>
+    </div>
+}
+function QUESTION(probs){
+    return <div>
+        <Nav/>
+        <QuestionAll/>
+    </div>
+}
+function RESULT(probs){
+    return <div>
+        <Nav/>
+        <Result/>
+    </div>
+}
+function LIST(probs){
+    
+    return <div>
+        <Nav/>
+        <Load load = {['목록','내 시간표']} px = {1300}/>
+        <List/>
+    </div>
+}
 
 function AppRouter(){
     return <BrowserRouter>
-    <Nav/>
          <Routes>
-                <Route path="/" element={<MainBanner/>}></Route>
-                <Route path="/usersave" element={<Usersave/>}></Route>
-                <Route path="/login" element={<Login/>}></Route>
-                <Route path="/main" element={<Main/>}></Route>
-                <Route path="/menu" element={<Menu/>}></Route>
-                <Route path="/question" element={<QuestionAll/>}></Route>
-                <Route path="/mainbanner" element={<MainBanner/>}></Route>
-                <Route path="/lastquestion" element={<LastQuestion/>}></Route>
+
+                <Route path="/" element={<MAINBANNER/>}></Route>
+                <Route path="/usersave" element={<USERSAVE/>}></Route>
+                <Route path="/login" element={<LOGIN/>}></Route>
+                <Route path="/main" element={<MAIN/>}></Route>
+                <Route path="/question" element={<QUESTION/>}></Route>
                 <Route path="/test" element={<Test/>}></Route>
-                <Route path="/test2" element={<Result/>}></Route>
+                <Route path="/result" element={<RESULT/>}></Route>
+                <Route path="/list" element={<LIST/>}></Route>
                 {/* <Route path="/question2" element={<QuestionAll/>}></Route> */}
             </Routes>
     </BrowserRouter>

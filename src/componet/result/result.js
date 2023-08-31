@@ -184,17 +184,20 @@ function Result_Top_Left(probs){
       </div>
   )
 }
-function Result_Top_Right(probs){
+function Result_Top_Right({gsapTF}){
+
+
     return(
-        <div className='container-result-top-right'>
-          <GeneralClass g_class={g_class}/>
+        <div className='container-result-top-right' >
+          <GeneralClass g_class={g_class} gsapTF={gsapTF}/>
+          
         </div>
     )
 }
 // ----------------------bottom--------------------------
 
 
-function Result_Bottom(probs){
+function Result_Bottom({gsapTF,setGsapTF}){
   
   const [list,setList] = useState(data.data)
   const [TLview,setTLview] = useState()
@@ -205,20 +208,21 @@ function Result_Bottom(probs){
     setList(list_)
   }
 
-  const [gsapTF,setGsapTF] = useState(false)
+  // const [gsapTF,setGsapTF] = useState(true)
   const smallhandlerRef = useRef(null)
   const bighandlerRef = useRef(null)
   const contentRef = useRef(null)
+  const rightRef = useRef(null)
 
   useEffect(()=>{
     if(gsapTF===true){
-      gsap.to(smallhandlerRef.current,{height:9, x:0, y:0,duration: 0.5, ease: "easeInOutBounce"})
-      gsap.to(bighandlerRef.current,{height:50, duration: 0.5, ease: "easeInOutBounce"})
-      gsap.to(contentRef.current,{width : 10, height : 10 ,duration: 0.5, ease: "easeInOutBounce"})
+      gsap.to(smallhandlerRef.current,{height:9, x:0, y:0,duration: 0.2, ease: "easeInOutBounce"})
+      gsap.to(bighandlerRef.current,{height:80, width:1048, duration: 0.5, ease: "easeInOutBounce"})
     }else{
-      gsap.to(smallhandlerRef.current,{height:0 ,y:3,duration: 0.5, ease: "easeInOutBounce"})
-      gsap.to(bighandlerRef.current,{height:202.67, duration: 0.5, ease: "easeInOutBounce"})
-      gsap.to(contentRef.current,{width : 300, height : 150 ,duration: 0.5, ease: "easeInOutBounce"})
+      gsap.timeline().to(smallhandlerRef.current,{height:9, x:0, y:0,duration: 0.2, ease: "easeInOutBounce"})
+      .to(smallhandlerRef.current,{height:0 ,y:3,duration: 0.5, ease: "easeInOutBounce"})
+      gsap.timeline().to(bighandlerRef.current,{height:80, width:1048, duration: 0.2, ease: "easeInOutBounce"})
+      .to(bighandlerRef.current,{height:202.67,width:1500, duration: 0.5, ease: "easeInOutBounce"})
     }
     
   },[gsapTF])
@@ -227,11 +231,11 @@ function Result_Bottom(probs){
   useEffect(()=>{
     const list_ = []
     list.map((item,index)=>{
-      list_.push(<Result_Bottom_Item contentRef={contentRef} key={`${index}item`} index={index} item={item} moveItem={moveItem}/>)
+      list_.push(<Result_Bottom_Item gsapTF={gsapTF} contentRef={contentRef} key={`${index}item`} index={index} item={item} moveItem={moveItem}/>)
   })
     setTLview(list_)
     
-  },[list])
+  },[list,gsapTF])
 
   useEffect(()=>{
     console.log(data.data)
@@ -247,7 +251,7 @@ function Result_Bottom(probs){
   </div>
 }
 
-function Result_Bottom_Item({item,index,moveItem,contentRef}){
+function Result_Bottom_Item({item,index,moveItem,gsapTF}){
 
   const [,dragRef] = useDrag({
     type:'ITEM',
@@ -265,6 +269,18 @@ function Result_Bottom_Item({item,index,moveItem,contentRef}){
     }
   })
 
+  const contentRef = useRef(null)
+
+  useEffect(()=>{
+    console.log(gsapTF)
+    if(gsapTF===true){
+      gsap.to(contentRef.current,{width : 50, marginBottom:50, height : 30 ,justifyContent:'start',duration: 0.5, ease: "easeInOutBounce"})
+    }else{
+      gsap.timeline().to(contentRef.current,{width : 50, marginBottom:50, height : 30 ,justifyContent:'start',duration: 0.4, ease: "easeInOutBounce"})
+      .to(contentRef.current,{width : 300,marginBottom:30, height : 150,justifyContent: 'space-around',gap: 30 ,duration: 0.5, ease: "easeInOutBounce"})
+    }
+  },[gsapTF])
+
   return <div className='TLITEMS' ref={node => {
     dragRef(dropRef(node));
     contentRef.current=node
@@ -272,19 +288,22 @@ function Result_Bottom_Item({item,index,moveItem,contentRef}){
   }}>
   
     {item.title}
-    <Small_TL_View item={item}/>
+    <Small_TL_View item={item} gsapTF={gsapTF}/>
   </div>
 }
 
 function Result(probs){
+
+  const [gsapTF,setGsapTF] = useState(true)
+
     return (
         <div className='container-result'>
             <div className='container-result-top'>
                 <Result_Top_Left/>
-                <Result_Top_Right/>
+                <Result_Top_Right gsapTF={gsapTF}/>
             </div>
             <div className='container-result-bottom'>
-                 <Result_Bottom></Result_Bottom>
+                 <Result_Bottom gsapTF={gsapTF} setGsapTF={setGsapTF}></Result_Bottom>
             </div>
         </div>
     )
