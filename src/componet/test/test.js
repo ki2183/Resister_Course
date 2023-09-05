@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-
+import './test.css'
 Modal.setAppElement('#root'); // 모달을 위한 접근성 설정
 
 function Test() {
@@ -11,13 +11,17 @@ function Test() {
 
   return (
     <div>
-      <button onClick={openModal}>모달 열기</button>
-      <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
-        <h2>질문</h2>
-        <p>예/아니요 질문 내용</p>
-        <button onClick={closeModal}>아니요</button>
-        <button onClick={closeModal}>예</button>
-      </Modal>
+      <div className='null-box'></div>
+      <div className='null-box'></div>
+      <div className='null-box'></div>
+       <div className='div1'>
+          <div className='div2'>
+          
+          </div>
+          <div className='div3'>
+            <div className='div4'></div>
+          </div>
+      </div>
     </div>
   );
 }

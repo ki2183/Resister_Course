@@ -184,7 +184,7 @@ const FrameChanger = () => {
             return prevIndex;
           }
         });
-      }, 1000 / 60);
+      }, 1000 / 40);
     } 
     else if (!isHovered && currentImageIndex !== imagePaths.length - 1) {
       setCurrentImageIndex(imagePaths.length - 1);

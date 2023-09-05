@@ -15,6 +15,7 @@ import MakeQuesitonInput from './question/question_input';
 import Result from './result/result';
 import List from './list/list';
 import Load from './load.js/load';
+import List_Edit from './list/list_edit/list_edit';
 
 function MAINBANNER(probs){
     return <div>
@@ -58,7 +59,20 @@ function LIST(probs){
     return <div>
         <Nav/>
         <Load load = {['목록','내 시간표']} px = {1300}/>
+        <div className='container-list-title'>
+                <span>저장된 시간표</span>
+            </div>
         <List/>
+    </div>
+}
+function LIST_EDIT(probs){
+    return <div className = "List_Edit_div" >
+        <Nav/>
+        <Load load = {['목록','내 시간표','시간표 수정']} px = {1300}/>
+        <div className='container-list-title'>
+                <span>시간표 수정</span>
+            </div>
+        <List_Edit></List_Edit>
     </div>
 }
 
@@ -74,6 +88,7 @@ function AppRouter(){
                 <Route path="/test" element={<Test/>}></Route>
                 <Route path="/result" element={<RESULT/>}></Route>
                 <Route path="/list" element={<LIST/>}></Route>
+                <Route path="/listedit" element={<LIST_EDIT/>}></Route>
                 {/* <Route path="/question2" element={<QuestionAll/>}></Route> */}
             </Routes>
     </BrowserRouter>

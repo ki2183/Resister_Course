@@ -39,7 +39,7 @@ function MainMenu(){
             name : "시간표",
             intro: "시간표만들기에서 저장했던시간표들을 불러오고 관리 할 수 있습니다.",
             imgurl :listpng,
-            link:"/",
+            link:"/list",
             num:"01"
         },
         {

@@ -41,7 +41,7 @@ export default function GeneralClass({g_class,gsapTF}){
     },[gsapTF])
 
     return <div className="container-general-class" ref={rightRef}>
-        <div className="restore-button"><button>저장</button></div>
+        <div className="restore-button"><button onClick={e=>{e.preventDefault(); window.location.href="/main"}}>저장</button></div>
         {content}
         
     </div>

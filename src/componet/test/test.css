@@ -1,13 +1,38 @@
-.listItem{
-    width: 100px;
-    height: 200px;
-    border: 1px solid black;
-}
-.container-list{
-    margin-top: 150px;
-    width: 1500px;
-    height: 300px;
-    border: 1px solid black;
+.div1{
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+    background-color: beige;
+}
+.div2{
+    margin-top: 50px;
+    width: 700px;
+    height: auto;
+    background-color: blue;
+}
+.div3{
+    width: 500px;
+    height: 2000px;
+    background-color: brown;
+}
+.div4{
+        /* margin-top: 50px; */
+        width: 500px;
+        height: 400px;
+        background-color: #332a4b;
+        position: sticky;
+        top: 0;
+}
+.div5{
+        /* margin-top: 50px; */
+        width: 500px;
+        height: 400px;
+        /* background-color: #332a4b; */
+        position: sticky;
+        top: 0;
+        background-color: black;
 }

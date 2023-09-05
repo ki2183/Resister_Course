@@ -2,8 +2,10 @@
     position: fixed;
     width: 100%;
     height: 30px;
-    background-color: #1c1729d1;
+    background-color: #444052;
     display: flex;
+    margin-top: -30px;
+    z-index: 30;
 }
 .container-load{
     height: 30px;

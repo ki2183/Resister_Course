@@ -1,7 +1,6 @@
 .container-list-right-in{
     width: 100%;
-    height: 100%;
-    
+    height: auto;    
 }
 .container-list-frame{
     margin-left:auto;
@@ -20,6 +19,18 @@
     display: grid;
     grid-template-columns: 1fr 8fr 2fr;
     /* border: 1px solid black; */
+    cursor: pointer;
+}
+.list-frame:hover{
+background-color: #1c1729;
+}
+.list-frame:hover .list-right-bottom>span {
+    color: antiquewhite;
+    /* font-weight: bold; */
+}
+.list-frame:hover .list-right-date {
+    color: antiquewhite;
+    /* font-weight: bold; */
 }
 .list-frame>div{
 }
@@ -30,15 +41,15 @@
     background-color: transparent;
 }
 .odd-list{
-    background-color: white;
+    background-color: rgba(235, 235, 235, 0.632);
 }
 .even-list{
-    background-color: rgba(235, 235, 235, 0.632);
+    background-color: white;
 }.icon-list{
     margin: none;
     width: 40px;
     height: 40px;
-    background-image: url('./dots2.png');
+    background-image: url('./dots.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-color: transparent;
@@ -50,6 +61,7 @@
 }
 .list-right-bottom>span{
     font-weight: lighter;
+    color: black;
 }
 .list-right-bottom>span:first-child{
     font-size: 30px;
@@ -75,5 +87,7 @@
    font-size: 15px;
    color: #666;
    margin-top: 40px;
-   /* font-weight: lighter; */
+}
+.null-box{
+    height: 50px;
 }

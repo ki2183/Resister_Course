@@ -5,6 +5,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     border: 1px solid #666;
+    cursor: pointer;
 }
 .s-tl-item{
     border: 0.1px solid black;
