@@ -16,6 +16,7 @@ import Result from './result/result';
 import List from './list/list';
 import Load from './load.js/load';
 import List_Edit from './list/list_edit/list_edit';
+import List_Menu from './list/list_edit/list_menu/list_menu';
 
 function MAINBANNER(probs){
     return <div>
@@ -68,7 +69,7 @@ function LIST(probs){
 function LIST_EDIT(probs){
     return <div className='List_Edit_div'>
         <Nav/>
-    
+        <List_Menu/>
         <List_Edit></List_Edit>
     </div>
 }
