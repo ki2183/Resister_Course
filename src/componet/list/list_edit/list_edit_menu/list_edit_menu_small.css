@@ -1,0 +1,75 @@
+.container-edit-menu-small{
+    width: 415px;
+    height: 100%;
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    align-items: start;
+    gap: 15px;
+}
+.container-edit-menu-small>div:first-child{
+    width: 100%;
+    height:60px;
+    background-color: beige;
+    margin: 0;
+}
+.container-edit-menu-small>div{
+    width: 65px;
+    height: 65px;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container-edit-menu-small>div:hover{
+    background-color: rgb(83, 83, 83);
+}
+.open-menu{
+    width: 435px;
+    height: 50px;
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: start;
+    z-index: 0;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 1px solid ;
+}
+.open-menu>button{
+    width: 20px;
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:transparent;
+    color: white;
+}
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: #888;
+  }
+  
+
+  ::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

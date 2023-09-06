@@ -66,12 +66,9 @@ function LIST(probs){
     </div>
 }
 function LIST_EDIT(probs){
-    return <div className = "List_Edit_div" >
+    return <div className='List_Edit_div'>
         <Nav/>
-        <Load load = {['목록','내 시간표','시간표 수정']} px = {1300}/>
-        <div className='container-list-title'>
-                <span>시간표 수정</span>
-            </div>
+    
         <List_Edit></List_Edit>
     </div>
 }
