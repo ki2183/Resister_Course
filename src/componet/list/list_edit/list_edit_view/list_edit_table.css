@@ -1,7 +1,7 @@
 .container-list-edit-table{
     width:700px;
     height: 400px;
-    position: sticky;
+    /* position: sticky; */
     top: 100px;
     z-index: 50;
     border-radius: 2px;
@@ -15,6 +15,7 @@
     overflow: hidden;
     background-color: white;
     cursor: pointer;
+    z-index: 0;
 }
 .edit-tl-table-list {
     border: 0.1px solid #66666652;

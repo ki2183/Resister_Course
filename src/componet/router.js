@@ -17,6 +17,7 @@ import List from './list/list';
 import Load from './load.js/load';
 import List_Edit from './list/list_edit/list_edit';
 import List_Menu from './list/list_edit/list_menu/list_menu';
+import { useState } from 'react';
 
 function MAINBANNER(probs){
     return <div>
@@ -67,10 +68,16 @@ function LIST(probs){
     </div>
 }
 function LIST_EDIT(probs){
+
+    const [menuTF,setMenuTF] = useState(false)
+    const reverseTF = ()=>{
+        setMenuTF(!menuTF)
+    }
+
     return <div className='List_Edit_div'>
         <Nav/>
-        <List_Menu/>
-        <List_Edit></List_Edit>
+        <List_Menu menuTF={menuTF} reverseTF={reverseTF}/>
+        <List_Edit menuTF={menuTF}></List_Edit>
     </div>
 }
 
@@ -87,7 +94,6 @@ function AppRouter(){
                 <Route path="/result" element={<RESULT/>}></Route>
                 <Route path="/list" element={<LIST/>}></Route>
                 <Route path="/listedit" element={<LIST_EDIT/>}></Route>
-                {/* <Route path="/question2" element={<QuestionAll/>}></Route> */}
             </Routes>
     </BrowserRouter>
 }
