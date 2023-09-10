@@ -32,22 +32,26 @@
     height: var(--fst);
   }
   .second-label{
-    border: 2px solid rgb(14, 216, 223);
+    /* border: 2px solid rgb(14, 216, 223); */
+    border: 2px solid rgb(14, 129, 223);
     width: var(--sec);
     height: var(--sec);
 
   }.third-label{
-    border: 2px solid rgb(14, 223, 174);
+    /* border: 2px solid rgb(14, 223, 174); */
+    border: 2px solid rgb(14, 129, 223);
     width: var(--trd);
     height: var(--trd);
 
   }.fourth-label{
-    border: 2px solid rgb(126, 223, 14);
+    /* border: 2px solid rgb(126, 223, 14); */
+    border: 2px solid rgb(14, 129, 223);
     width: var(--sec);
     height: var(--sec);
 
   }.fifth-label{
-    border: 2px solid rgb(223, 157, 14);
+    /* border: 2px solid rgb(223, 157, 14); */
+    border: 2px solid rgb(14, 129, 223);
     width: var(--fst);
     height: var(--fst);
   }
@@ -60,19 +64,23 @@
   
 
   .second-label:hover {
-    background-color: rgb(14, 216, 223); 
+    /* background-color: rgb(14, 216, 223);  */
+    border: 2px solid rgb(14, 129, 223);
   }
   
   .third-label:hover {
-    background-color: rgb(14, 223, 174); 
+    /* background-color: rgb(14, 223, 174);  */
+    border: 2px solid rgb(14, 129, 223);
   }
   
   .fourth-label:hover {
-    background-color: rgb(126, 223, 14); 
+    /* background-color: rgb(126, 223, 14);  */
+    border: 2px solid rgb(14, 129, 223);
   }
   
   .fifth-label:hover {
-    background-color: rgb(223, 157, 14);
+    /* background-color: rgb(223, 157, 14); */
+    border: 2px solid rgb(14, 129, 223);
   }
 
 
@@ -80,20 +88,25 @@
 
   input[type='radio']:checked + .first-label {
     background-color: rgb(14, 129, 223);
+    
   }
   
   input[type='radio']:checked + .second-label {
-    background-color: rgb(14, 216, 223);
+    /* background-color: rgb(14, 216, 223); */
+    background-color: rgb(14, 129, 223);
   }
   
   input[type='radio']:checked + .third-label {
-    background-color: rgb(14, 223, 174);
+    /* background-color: rgb(14, 223, 174); */
+    background-color: rgb(14, 129, 223);
   }
   
   input[type='radio']:checked + .fourth-label {
-    background-color: rgb(126, 223, 14);
+    /* background-color: rgb(126, 223, 14); */
+    background-color: rgb(14, 129, 223);
   }
   
   input[type='radio']:checked + .fifth-label {
-    background-color: rgb(223, 157, 14);
+    /* background-color: rgb(223, 157, 14); */
+    background-color: rgb(14, 129, 223);
   }

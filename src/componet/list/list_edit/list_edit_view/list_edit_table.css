@@ -1,11 +1,9 @@
 .container-list-edit-table{
     width:700px;
     height: 400px;
-    /* position: sticky; */
     top: 100px;
     z-index: 50;
     border-radius: 2px;
-    /* box-shadow: 2px 2px 2px #66666668; */
     border: 1px solid #66666668;
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr 1fr;

@@ -3,10 +3,12 @@ import './list_menu.css'
 import { gsap } from 'gsap'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import dto from '../classes/classes.json'
 export default function List_Menu(probs){
 
     const RightRef = useRef(null)
     const ButtonRef = useRef(null)
+    const [menuItem, setMenuItem] = useState([])
     
     const [arrow,setArrow] = useState('▶')
     useEffect(()=>{
@@ -22,13 +24,38 @@ export default function List_Menu(probs){
         }
     },[probs.menuTF])
 
+    // useEffect(()=>{
+    //     const timeoutId = setTimeout(() => {
+    //         probs.reverseTF();
+    //       }, 100);
+    //       return () => clearTimeout(timeoutId);
+    // },[])
+
     useEffect(()=>{
-        const timeoutId = setTimeout(() => {
-            probs.reverseTF();
-          }, 100);
-      
-          // 컴포넌트가 언마운트되면 타임아웃을 클리어하여 메모리 누수를 방지합니다.
-          return () => clearTimeout(timeoutId);
+        const menuItems = []
+        const q = []
+        console.log(dto)
+        dto.data.map((item,index) =>{
+            
+            console.log(index)
+
+            if(q.length < 2){
+                q.push(item)
+            }
+            else{
+                for(let i=0; i<2; i++){
+                    const val = q.pop()
+                    menuItems.push(val)
+                }
+                menuItems.push(" ")
+                // console.log(menuItems)
+            }
+        })
+        if(q && q.length !== 0 ){
+            console.log(q)
+        }
+        console.log(menuItems)
+        console.log(q)
     },[])
 
     return (

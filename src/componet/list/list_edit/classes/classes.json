@@ -1,0 +1,157 @@
+{
+    "data":[
+        {
+            "class_name" : "돈과 인간",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "월 09:30~10:45/수 11:00~12:15",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "class_name" : "자료구조",
+            "class_professor":"이경옥",
+            "class_time" : "화 13:00~14:15/목 13:00~14:15",
+            "index":[[1,2],[3,2]]
+        },     {
+            "class_name" : "물리로 보는 세계",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "발탄국밥론",
+            "class_professor":"조익범",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "돈과 인간",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "월 09:30~10:45/수 11:00~12:15",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "class_name" : "자료구조",
+            "class_professor":"이경옥",
+            "class_time" : "화 13:00~14:15/목 13:00~14:15",
+            "index":[[1,2],[3,2]]
+        },     {
+            "class_name" : "물리로 보는 세계",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "발탄국밥론",
+            "class_professor":"조익범",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "돈과 인간",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "월 09:30~10:45/수 11:00~12:15",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "class_name" : "자료구조",
+            "class_professor":"이경옥",
+            "class_time" : "화 13:00~14:15/목 13:00~14:15",
+            "index":[[1,2],[3,2]]
+        },     {
+            "class_name" : "물리로 보는 세계",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "발탄국밥론",
+            "class_professor":"조익범",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "돈과 인간",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "월 09:30~10:45/수 11:00~12:15",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "class_name" : "자료구조",
+            "class_professor":"이경옥",
+            "class_time" : "화 13:00~14:15/목 13:00~14:15",
+            "index":[[1,2],[3,2]]
+        },     {
+            "class_name" : "물리로 보는 세계",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "발탄국밥론",
+            "class_professor":"조익범",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "돈과 인간",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "월 09:30~10:45/수 11:00~12:15",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "class_name" : "자료구조",
+            "class_professor":"이경옥",
+            "class_time" : "화 13:00~14:15/목 13:00~14:15",
+            "index":[[1,2],[3,2]]
+        },     {
+            "class_name" : "물리로 보는 세계",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "발탄국밥론",
+            "class_professor":"조익범",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "돈과 인간",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "월 09:30~10:45/수 11:00~12:15",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "class_name" : "자료구조",
+            "class_professor":"이경옥",
+            "class_time" : "화 13:00~14:15/목 13:00~14:15",
+            "index":[[1,2],[3,2]]
+        },     {
+            "class_name" : "물리로 보는 세계",
+            "class_professor":"정태성",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        },{
+            "class_name" : "발탄국밥론",
+            "class_professor":"조익범",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        }
+        ,{
+            "class_name" : "게임프로그래밍",
+            "class_professor":"정승민",
+            "class_score":3,
+            "class_time" : "금 09:30~10:45/금 11:00~12:15",
+            "index":[[4,0],[4,1]]
+        }
+        
+    ]
+}

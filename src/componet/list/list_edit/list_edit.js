@@ -40,17 +40,21 @@ export default function List_Edit(probs){
                         <span>내 시간표 수정</span>
                     </div>
                 </div>
+                
                 <div className='container-list-edit-in'>
                     <div className='frame-list-edit-in-null' ref={NullRef}>
                         
                     </div>
                     <div className='frame-list-edit-in'>
                         <div className='frame-list-edit-in-title'>
-                            <input type='text' value={"제목"}></input>
-                            <button></button>
-                            <button></button>
+                            <input type='text' defaultValue={'제목'} ></input>
                         </div>
+                        <div className='line-list-edit-load'></div>
                         <List_Edit_Table data = {data}/>
+                        <div className='frame-arrow'>
+                                <button id='back-arrow'></button>
+                                <button id='front-arrow'></button>
+                        </div>
                         <button>수정하기</button>
                     </div>
                 </div>
