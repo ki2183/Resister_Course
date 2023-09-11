@@ -2,7 +2,6 @@ import { useLocation } from 'react-router-dom';
 import './list_edit.css'
 import { useEffect } from 'react';
 import List_Edit_Table from './list_edit_view/list_edit_table';
-import Load from '../../load.js/load';
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 
@@ -14,7 +13,7 @@ export default function List_Edit(probs){
     const NullRef = useRef(null)
     
     useEffect(()=>{
-        console.log(data)
+        console.log(probs.tableDTO)
     },[])
 
     useEffect(()=>{
@@ -50,7 +49,7 @@ export default function List_Edit(probs){
                             <input type='text' defaultValue={'제목'} ></input>
                         </div>
                         <div className='line-list-edit-load'></div>
-                        <List_Edit_Table data = {data}/>
+                        <List_Edit_Table data = {data} tableDTO={probs.tableDTO} del_table_dto={probs.del_table_dto} />
                         <div className='frame-arrow'>
                                 <button id='back-arrow'></button>
                                 <button id='front-arrow'></button>

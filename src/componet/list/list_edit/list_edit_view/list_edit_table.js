@@ -2,9 +2,8 @@ import { useEffect } from "react"
 import "./list_edit_table.css"
 import { useState } from "react";
 
-export default function List_Edit_Table({data}){
-    
-    const TL_ = data && data.timeline ? data : null;
+export default function List_Edit_Table({data,tableDTO,del_table_dto}){
+
     
     // const handleButtonClick = () => {
 
@@ -25,8 +24,10 @@ export default function List_Edit_Table({data}){
     useEffect(()=>{
 
         console.log("확인")
+        console.log(tableDTO)
 
-        const TL = data && data.timeline ? data.timeline : null;
+        // const TL = data && data.timeline ? data.timeline : null; //이전 데이터
+        const TL = tableDTO
         console.log(TL)
 
         const TLview_=[]
@@ -53,7 +54,14 @@ export default function List_Edit_Table({data}){
                         }
 
                         TLview_.push(
-                            <div key={`class${i}${j}`} className={['edit-tl-table-list', `${css}`,'edit-tl-table-list-content'].join(' ')}>{val}</div>
+                            <div key={`class${i}${j}`} className={['edit-tl-table-list', `${css}`,'edit-tl-table-list-content'].join(' ')}
+                            onClick={e=>{
+                                e.preventDefault()
+                                // alert(`${val}${j-1} ${i}`)
+                                del_table_dto(val,j-1,i)
+                            }}
+                            >{val}
+                            </div>
                         )}
                     }
                 } 
@@ -62,12 +70,7 @@ export default function List_Edit_Table({data}){
         //요일 div
       
         
-    },[])
-
-    useEffect(()=>{
-        console.log(data)
-    },[])
-
+    },[tableDTO])
     return (
         <div className="container-list-edit-table">
             {TLview}

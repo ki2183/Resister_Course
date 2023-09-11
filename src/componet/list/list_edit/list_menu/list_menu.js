@@ -11,6 +11,18 @@ export default function List_Menu(probs){
     const [menuItem, setMenuItem] = useState([])
     
     const [arrow,setArrow] = useState('▶')
+
+    const dateBefore = (date) =>{
+        const day = date[0]
+        const time = date.slice(2,13)
+        return `${day}(${time})`
+    }
+    const dateAfter = (date) =>{
+        const day = date[0]
+        const time = date.slice(16)
+        return `${day}(${time})`
+    }
+
     useEffect(()=>{
         console.log(probs.menuTF)
         if(probs.menuTF===true){
@@ -24,38 +36,69 @@ export default function List_Menu(probs){
         }
     },[probs.menuTF])
 
-    // useEffect(()=>{
-    //     const timeoutId = setTimeout(() => {
-    //         probs.reverseTF();
-    //       }, 100);
-    //       return () => clearTimeout(timeoutId);
-    // },[])
+    useEffect(()=>{
+        const timeoutId = setTimeout(() => {
+            probs.reverseTF();
+          }, 100);
+          return () => clearTimeout(timeoutId);
+    },[])
 
     useEffect(()=>{
+        // const menuItem_ = [...dto.data]
         const menuItems = []
         const q = []
-        console.log(dto)
+        
         dto.data.map((item,index) =>{
-            
-            console.log(index)
 
-            if(q.length < 2){
-                q.push(item)
-            }
-            else{
-                for(let i=0; i<2; i++){
-                    const val = q.pop()
-                    menuItems.push(val)
+            q.push(item)
+
+            if(q.length >= 2){
+                
+                menuItems.push(
+                    <div className='item-list-menu-right'>
+                        <div>
+                            <span>{q[0].class_name}</span>
+                            <span>담당교수: {q[0].class_professor}</span>
+                            <span>학점: {q[0].class_score}</span>
+                            <span>{dateBefore(q[0].class_time)}</span>
+                            <span>{dateAfter(q[0].class_time)}</span>
+                        </div>
+
+                        <div>
+                        <span>{q[1].class_name}</span>
+                            <span>담당교수: {q[1].class_professor}</span>
+                            <span>학점: {q[1].class_score}</span>
+                            <span>{dateBefore(q[1].class_time)}</span>
+                            <span>{dateAfter(q[1].class_time)}</span>
+                        </div>
+                    </div>
+                )
+          
+                while (q.length > 0) {
+                    q.pop();
                 }
-                menuItems.push(" ")
-                // console.log(menuItems)
             }
+
         })
         if(q && q.length !== 0 ){
-            console.log(q)
+            menuItems.push(
+                <div className='item-list-menu-right'>
+                    <div>
+                            <span>{q[0].class_name}</span>
+                            <span>담당교수: {q[0].class_professor}</span>
+                            <span>학점: {q[0].class_score}</span>
+                            <span>{dateBefore(q[0].class_time)}</span>
+                            <span>{dateAfter(q[0].class_time)}</span>
+                    </div>
+
+                </div>
+            )
+            while (q.length > 0) {
+                q.pop();
+            }
         }
-        console.log(menuItems)
-        console.log(q)
+
+        setMenuItem(menuItems)
     },[])
 
     return (
@@ -83,99 +126,7 @@ export default function List_Menu(probs){
                         <button>
                         </button>
                     </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-                            <span>발탄국밥론</span>
-                            <span>담당교수: 조익범</span>
-                            <span>학점: 3</span>
-                            <span>목(13:00~14:15)</span>
-                            <span>목(14:30~15:45)</span>
-                        </div>
-
-                        <div>
-                            <span>물리와 세계</span>
-                            <span>담당교수: 정태성</span>
-                            <span>학점: 3</span>
-                            <span>월(9:30~10:45)</span>
-                            <span>수(11:00~12:15)</span>
-                        </div>
-                    </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-                    <div className='item-list-menu-right'>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-                    
-                
+                    {menuItem}
         
                 </div>
               

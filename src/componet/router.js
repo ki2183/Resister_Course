@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import './router.css'
 
 import Home from './home/home';
@@ -18,6 +18,7 @@ import Load from './load.js/load';
 import List_Edit from './list/list_edit/list_edit';
 import List_Menu from './list/list_edit/list_menu/list_menu';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function MAINBANNER(probs){
     return <div>
@@ -70,14 +71,35 @@ function LIST(probs){
 function LIST_EDIT(probs){
 
     const [menuTF,setMenuTF] = useState(false)
-    const reverseTF = ()=>{
-        setMenuTF(!menuTF)
+    const location = useLocation();
+    const { data } = location.state;
+
+    const [tableDTO,setTableDTO] = useState(data.timeline)
+    const reverseTF = ()=>{ //애니메이션 tf
+        setMenuTF(!menuTF) 
     }
+
+    
+    const del_table_dto = (val,i,j) =>{
+        // const table_ = {...tableDTO,data:{...tableDTO.data,timeline:}}
+        console.log(tableDTO)
+        // alert(`${i}${j}`)
+        const tableDTO_ = [...tableDTO]
+        alert(tableDTO_[i][j])
+    }
+
+
+    useEffect(()=>{
+        console.log(data.timeline)
+        console.log("확인")
+        const tl = data.timeline
+        setTableDTO(tl)
+    },[])
 
     return <div className='List_Edit_div'>
         <Nav/>
-        <List_Menu menuTF={menuTF} reverseTF={reverseTF}/>
-        <List_Edit menuTF={menuTF}></List_Edit>
+        <List_Menu menuTF={menuTF} reverseTF={reverseTF} />
+        <List_Edit menuTF={menuTF} tableDTO={tableDTO} del_table_dto={del_table_dto} />
     </div>
 }
 
