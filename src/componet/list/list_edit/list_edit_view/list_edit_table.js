@@ -38,7 +38,8 @@ export default function List_Edit_Table({data,tableDTO,del_table_dto}){
             for(let i = 0; i<6; i++){
                 TLview_.push(
                     <div key={`${i} day`} className={['edit-tl-table-list', `tl-day-list-edit`].join(' ')}>{DAY[i]}</div>
-                )}
+                )
+            }
             for(let i = 0; i<6; i++){
                 for(let j = 0; j<6; j++){
                     if(j===0){
@@ -51,20 +52,46 @@ export default function List_Edit_Table({data,tableDTO,del_table_dto}){
                         
                         if(stack_val.includes !== true && val !== ''){
                             console.log(val)
+                            css = 'active-edit-table-list'
                         }
 
-                        TLview_.push(
-                            <div key={`class${i}${j}`} className={['edit-tl-table-list', `${css}`,'edit-tl-table-list-content'].join(' ')}
-                            onClick={e=>{
-                                e.preventDefault()
-                                // alert(`${val}${j-1} ${i}`)
-                                del_table_dto(val,j-1,i)
-                            }}
-                            >{val}
-                            </div>
-                        )}
+                        if(TL[j-1][i] === "null"){
+                            TLview_.push(
+                                <div key={`class${i}${j}`} className={['edit-tl-table-list', `${css}`,'edit-tl-table-list-content'].join(' ')}
+                                onClick={e=>{
+                                    e.preventDefault()
+                                    // alert(`${val}${j-1} ${i}`)
+                                    // del_table_dto(j-1,i)
+                                }}
+                                >{val}
+                                </div>
+                            )
+                        }else{
+                            TLview_.push(
+                                <div key={`class${i}${j}`} className={['edit-tl-table-list', `${css}`,'edit-tl-table-list-content'].join(' ')}
+                                onClick={e=>{
+                                    e.preventDefault()
+                                    // alert(`${val}${j-1} ${i}`)
+                                    del_table_dto(j-1,i)
+                                }}
+                                >{val}
+                                </div>
+                            )
+                        }
+
+                        // TLview_.push(
+                        //     <div key={`class${i}${j}`} className={['edit-tl-table-list', `${css}`,'edit-tl-table-list-content'].join(' ')}
+                        //     onClick={e=>{
+                        //         e.preventDefault()
+                        //         // alert(`${val}${j-1} ${i}`)
+                        //         del_table_dto(j-1,i)
+                        //     }}
+                        //     >{val}
+                        //     </div>
+                        // )
                     }
-                } 
+                }
+            } 
             setTLview(TLview_)  
         }
         //요일 div

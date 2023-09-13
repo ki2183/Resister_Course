@@ -13,7 +13,6 @@
     overflow: hidden;
     background-color: white;
     cursor: pointer;
-    z-index: 0;
 }
 .edit-tl-table-list {
     border: 0.1px solid #66666652;
@@ -21,9 +20,9 @@
     align-items: center;
     justify-content: center;
 
-}.edit-tl-table-list:hover{
- background-color: rgb(248, 245, 245);
- border: 0.1px solid #272727;
+}.active-edit-table-list:hover{
+ background-color: rgb(224, 216, 216);
+ border: 0.1px solid #000000;
 }
 .edit-tl-table-list-content{
     font-size: 13px;

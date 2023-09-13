@@ -4,23 +4,25 @@ import { gsap } from 'gsap'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import dto from '../classes/classes.json'
+import './list_menu_modal.css'
+
 export default function List_Menu(probs){
 
     const RightRef = useRef(null)
     const ButtonRef = useRef(null)
-    const [menuItem, setMenuItem] = useState([])
+    const largeRef = useRef(null)
+    
+const [menuItem, setMenuItem] = useState([])
     
     const [arrow,setArrow] = useState('▶')
 
     const dateBefore = (date) =>{
-        const day = date[0]
-        const time = date.slice(2,13)
-        return `${day}(${time})`
+        const time = date.slice(0,16)
+        return time
     }
     const dateAfter = (date) =>{
-        const day = date[0]
-        const time = date.slice(16)
-        return `${day}(${time})`
+        const time = date.slice(18)
+        return time
     }
 
     useEffect(()=>{
@@ -28,10 +30,13 @@ export default function List_Menu(probs){
         if(probs.menuTF===true){
             gsap.to(RightRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
             gsap.to(ButtonRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
+            gsap.timeline().to(largeRef.current, {  width:450, duration: 0.5 ,ease: "easeInOutBounce" })
+            .to(largeRef.current, {  width:70, duration: 0.1 ,ease: "easeInOutBounce" })
             setArrow('◀')
         }else if(probs.menuTF===false){
             gsap.to(RightRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce"})
             gsap.to(ButtonRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
+            gsap.timeline().to(largeRef.current, {  width:450, duration: 0.1 ,ease: "easeInOutBounce" })
             setArrow('▶')
         }
     },[probs.menuTF])
@@ -44,68 +49,73 @@ export default function List_Menu(probs){
     },[])
 
     useEffect(()=>{
-        // const menuItem_ = [...dto.data]
+    
         const menuItems = []
         const q = []
         
+        // const dto_ = dto.data
+
         dto.data.map((item,index) =>{
 
             q.push(item)
 
             if(q.length >= 2){
-                
+                const dto1 = q[0]
+                const dto2 = q[1]
+
                 menuItems.push(
-                    <div className='item-list-menu-right'>
-                        <div>
-                            <span>{q[0].class_name}</span>
-                            <span>담당교수: {q[0].class_professor}</span>
-                            <span>학점: {q[0].class_score}</span>
+                    <div className='item-list-menu-right' key={index}>
+                        <div onClick={e=>{e.preventDefault(); console.log(dto1); probs.changeDTO(dto1)}}>
+                            <span>{q[0].subject_title}</span>
+                            <span>담당교수: {q[0].instruction}</span>
+                            <span>학점: {q[0].credit}</span>
                             <span>{dateBefore(q[0].class_time)}</span>
-                            <span>{dateAfter(q[0].class_time)}</span>
+                            { q[0].class_time.length > 17 && (<span>{dateAfter(q[0].class_time)}</span>)}
                         </div>
 
-                        <div>
-                        <span>{q[1].class_name}</span>
-                            <span>담당교수: {q[1].class_professor}</span>
-                            <span>학점: {q[1].class_score}</span>
+                        <div onClick={e=>{e.preventDefault(); console.log(dto2); probs.changeDTO(dto2)}}>
+                            <span>{q[1].subject_title}</span>
+                            <span>담당교수: {q[1].instruction}</span>
+                            <span>학점: {q[1].credit}</span>
                             <span>{dateBefore(q[1].class_time)}</span>
-                            <span>{dateAfter(q[1].class_time)}</span>
+                            { q[1].class_time.length > 17 && (<span>{dateAfter(q[1].class_time)}</span>)}
                         </div>
                     </div>
                 )
           
                 while (q.length > 0) {
-                    q.pop();
+                    let a = q.pop();
                 }
             }
 
         })
         if(q && q.length !== 0 ){
+            const dto1 = q[0]
             menuItems.push(
-                <div className='item-list-menu-right'>
-                    <div>
-                            <span>{q[0].class_name}</span>
-                            <span>담당교수: {q[0].class_professor}</span>
-                            <span>학점: {q[0].class_score}</span>
+                <div className='item-list-menu-right' key={dto1.id}>
+                        <div onClick={e=>{e.preventDefault(); console.log(dto1); probs.changeDTO(dto1)}}>
+                            <span>{q[0].subject_title}</span>
+                            <span>담당교수: {q[0].instruction}</span>
+                            <span>학점: {q[0].credit}</span>
                             <span>{dateBefore(q[0].class_time)}</span>
-                            <span>{dateAfter(q[0].class_time)}</span>
-                    </div>
+                            { q[0].class_time.length > 17 && (<span>{dateAfter(q[0].class_time)}</span>)}
+                        </div>
 
-                </div>
+                        
+                    </div>
             )
             while (q.length > 0) {
                 q.pop();
             }
         }
-
         setMenuItem(menuItems)
     },[])
 
     return (
-        <div className='container-list-menu'>
+        <div ref={largeRef} className='container-list-menu'>
 
             <div></div>
-            <div>
+            <div ref={largeRef}>
             <div className='container-menu-arrow' ref={ButtonRef} onClick={e=>{
                 e.preventDefault();
                 probs.reverseTF();

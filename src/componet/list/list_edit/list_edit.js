@@ -14,6 +14,7 @@ export default function List_Edit(probs){
     
     useEffect(()=>{
         console.log(probs.tableDTO)
+        console.log(data.title)
     },[])
 
     useEffect(()=>{
@@ -46,7 +47,7 @@ export default function List_Edit(probs){
                     </div>
                     <div className='frame-list-edit-in'>
                         <div className='frame-list-edit-in-title'>
-                            <input type='text' defaultValue={'제목'} ></input>
+                            <input type='text' defaultValue={data.title} ></input>
                         </div>
                         <div className='line-list-edit-load'></div>
                         <List_Edit_Table data = {data} tableDTO={probs.tableDTO} del_table_dto={probs.del_table_dto} />
