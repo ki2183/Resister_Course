@@ -11,11 +11,12 @@ export default function List_Menu(probs){
     const RightRef = useRef(null)
     const ButtonRef = useRef(null)
     const largeRef = useRef(null)
+    const searchRef = useRef(null)
     
-const [menuItem, setMenuItem] = useState([])
+    const [menuItem, setMenuItem] = useState([])
     
     const [arrow,setArrow] = useState('▶')
-
+    const [stageHeight,setStageHeight] = useState(window.innerHeight)
     const dateBefore = (date) =>{
         const time = date.slice(0,16)
         return time
@@ -30,12 +31,14 @@ const [menuItem, setMenuItem] = useState([])
         if(probs.menuTF===true){
             gsap.to(RightRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
             gsap.to(ButtonRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
+            gsap.to(searchRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
             gsap.timeline().to(largeRef.current, {  width:450, duration: 0.5 ,ease: "easeInOutBounce" })
             .to(largeRef.current, {  width:70, duration: 0.1 ,ease: "easeInOutBounce" })
             setArrow('◀')
         }else if(probs.menuTF===false){
             gsap.to(RightRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce"})
             gsap.to(ButtonRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
+            gsap.to(searchRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
             gsap.timeline().to(largeRef.current, {  width:450, duration: 0.1 ,ease: "easeInOutBounce" })
             setArrow('▶')
         }
@@ -47,6 +50,27 @@ const [menuItem, setMenuItem] = useState([])
           }, 100);
           return () => clearTimeout(timeoutId);
     },[])
+
+    const handleResize = () => {
+        setStageHeight(window.innerHeight);
+      };
+
+    useEffect(()=>{
+        // console.log(window.innerHeight)
+        // console.log(stageHeight)
+
+        window.addEventListener('resize' , handleResize)
+        
+        return ()=>{
+            window.removeEventListener('resize',handleResize)
+        }
+    },[])
+
+    
+    useEffect(()=>{
+    
+        console.log(stageHeight)
+    },[stageHeight])
 
     useEffect(()=>{
     
@@ -128,16 +152,27 @@ const [menuItem, setMenuItem] = useState([])
                     <div>ALL</div>
                     <div>전공</div>
                     <div>교양</div>
+                    <div>시간</div>
+                    <div>학년</div>
 
                 </div>
-                <div className='container-list-menu-right' ref={RightRef}>
-                    <div id='list-menu-right-search'>
+                <div id='list-menu-right-search' ref={searchRef}>
+                    <div> 
+                        <button>제목</button>
+                        <button>교수</button>
+                    </div>
+                    <div>
                         <input type='text'/>
                         <button>
                         </button>
                     </div>
-                    {menuItem}
-        
+                    
+                </div>
+                <div className='container-list-menu-right' ref={RightRef}>
+                    <div></div>
+                    <div style={{height :`${stageHeight-130}px`}}>
+                        {menuItem}
+                    </div>
                 </div>
               
             </div>
