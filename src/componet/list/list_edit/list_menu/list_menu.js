@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import dto from '../classes/classes.json'
 import './list_menu_modal.css'
+import './scrollbar.css'
 
 export default function List_Menu(probs){
 
@@ -41,13 +42,13 @@ export default function List_Menu(probs){
             gsap.to(ButtonRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
             gsap.to(searchRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
             gsap.timeline().to(largeRef.current, {  width:450, duration: 0.5 ,ease: "easeInOutBounce" })
-            .to(largeRef.current, {  width:70, duration: 0.1 ,ease: "easeInOutBounce" })
+            .to(largeRef.current, {  width:70, duration: 0 ,ease: "easeInOutBounce" })
             setArrow('◀')
         }else if(probs.menuTF===false){
             gsap.to(RightRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce"})
             gsap.to(ButtonRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
             gsap.to(searchRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
-            gsap.timeline().to(largeRef.current, {  width:450, duration: 0.1 ,ease: "easeInOutBounce" })
+            gsap.timeline().to(largeRef.current, {  width:450, duration: 0 ,ease: "easeInOutBounce" })
             setArrow('▶')
         }
     },[probs.menuTF])
@@ -200,13 +201,15 @@ export default function List_Menu(probs){
                             </div>
                             
                         </div>
+
+                        
                        
                     </div>
                     
                 </div>
                 <div className='container-list-menu-right' ref={RightRef}>
                     <div></div>
-                    <div style={{height :`${stageHeight-130}px`}}>
+                    <div style={{height :`${stageHeight-140}px`}}>
                         {menuItem}
                     </div>
                 </div>
