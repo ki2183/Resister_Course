@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import './list_menu.css'
 import { gsap } from 'gsap'
 import { useState } from 'react'
@@ -12,11 +12,15 @@ export default function List_Menu(probs){
     const ButtonRef = useRef(null)
     const largeRef = useRef(null)
     const searchRef = useRef(null)
+    const searchModeRef =useRef(null)
     
     const [menuItem, setMenuItem] = useState([])
-    
+    const [searchMode,setSearchMode] = useState(false)
+
     const [arrow,setArrow] = useState('▶')
     const [stageHeight,setStageHeight] = useState(window.innerHeight)
+
+
     const dateBefore = (date) =>{
         const time = date.slice(0,16)
         return time
@@ -24,6 +28,10 @@ export default function List_Menu(probs){
     const dateAfter = (date) =>{
         const time = date.slice(18)
         return time
+    }
+
+    const modeHandler = () =>{
+        setSearchMode(!searchMode)
     }
 
     useEffect(()=>{
@@ -44,12 +52,20 @@ export default function List_Menu(probs){
         }
     },[probs.menuTF])
 
-    useEffect(()=>{
-        const timeoutId = setTimeout(() => {
-            probs.reverseTF();
-          }, 100);
-          return () => clearTimeout(timeoutId);
-    },[])
+    // useEffect(()=>{
+    //     const timeoutId = setTimeout(() => {
+    //         probs.reverseTF();
+    //       }, 100);
+    //       return () => clearTimeout(timeoutId);
+    // },[])
+
+    useEffect(()=>{ //검색gsap
+        if(searchMode === false){
+            gsap.to(searchModeRef.current, { x: 0, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
+        }else{
+            gsap.to(searchModeRef.current, { x: -42, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
+        }
+    },[searchMode])
 
     const handleResize = () => {
         setStageHeight(window.innerHeight);
@@ -71,6 +87,18 @@ export default function List_Menu(probs){
     
         console.log(stageHeight)
     },[stageHeight])
+
+    useLayoutEffect(()=>{
+
+        const stageWidth = window.innerWidth;
+
+        const timeoutId = setTimeout(() => {
+            if(stageWidth<1300)
+                probs.reverseTF();
+        }, 100);
+
+        return () => clearTimeout(timeoutId);
+    },[])
 
     useEffect(()=>{
     
@@ -157,14 +185,22 @@ export default function List_Menu(probs){
 
                 </div>
                 <div id='list-menu-right-search' ref={searchRef}>
-                    <div> 
-                        <button>제목</button>
-                        <button>교수</button>
-                    </div>
+               
                     <div>
-                        <input type='text'/>
                         <button>
                         </button>
+                        <input type='text'/>
+                        <button>
+                        |
+                        </button>
+                        <div onClick={modeHandler}>
+                            <div ref={searchModeRef}>
+                                <span>제목</span>
+                                <span>교수</span>
+                            </div>
+                            
+                        </div>
+                       
                     </div>
                     
                 </div>

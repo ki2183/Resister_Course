@@ -155,7 +155,6 @@ function LIST_EDIT(probs){
         let limit = false
         let temp
         
-        // const updateDTO = [...tableDTO] 
         const updateDTO = JSON.parse(JSON.stringify(tableDTO));
 
     
