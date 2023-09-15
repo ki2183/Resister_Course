@@ -9,14 +9,23 @@ import './scrollbar.css'
 
 export default function List_Menu(probs){
 
+    const option_width_default = 350
+    const option_gap = 10
+
     const RightRef = useRef(null)
     const ButtonRef = useRef(null)
     const largeRef = useRef(null)
     const searchRef = useRef(null)
-    const searchModeRef =useRef(null)
-    
+    const searchModeRef = useRef(null)
+    const [option_width,setOption_width] = useState(option_width_default)
+    const option_direction_Ref = useRef(null)
+     
     const [menuItem, setMenuItem] = useState([])
     const [searchMode,setSearchMode] = useState(false)
+
+    const small_menu = [['제목','교수'],['제목','교수'],['제목','교수'],[9,11,13,14,16,17],[1,2,3,4]]
+    const [small_menu_option,setSmall_menu_option] = useState(['제목','교수'])
+    const [small_menu_optionView,setSmall_menu_option_View] = useState([])
 
     const [arrow,setArrow] = useState('▶')
     const [stageHeight,setStageHeight] = useState(window.innerHeight)
@@ -35,8 +44,19 @@ export default function List_Menu(probs){
         setSearchMode(!searchMode)
     }
 
+    const small_menu_option_handler = (index) =>{
+        setSmall_menu_option(small_menu[index])
+    }
+
+    const option_direction_Handler = (n) =>{
+       
+        gsap.to(option_direction_Ref.current, { x: n, y: 0, rotate: 0, duration: 0.4 ,ease: "easeInOutBounce" })
+
+    }
+
     useEffect(()=>{
         console.log(probs.menuTF)
+
         if(probs.menuTF===true){
             gsap.to(RightRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
             gsap.to(ButtonRef.current, { x: -380, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
@@ -52,13 +72,6 @@ export default function List_Menu(probs){
             setArrow('▶')
         }
     },[probs.menuTF])
-
-    // useEffect(()=>{
-    //     const timeoutId = setTimeout(() => {
-    //         probs.reverseTF();
-    //       }, 100);
-    //       return () => clearTimeout(timeoutId);
-    // },[])
 
     useEffect(()=>{ //검색gsap
         if(searchMode === false){
@@ -83,11 +96,47 @@ export default function List_Menu(probs){
         }
     },[])
 
+    // const small_menu = [['제목','교수'],['제목','교수'],[9,11,13,14,16,17],[1,2,3,4]]
+
+    // const [small_menu_option,setSmall_menu_option] = useState(['제목','교수'])
+
+    // const [small_menu_optionView,setSmall_menu_option_View] = useState([])
+
+
+    // useEffect(()=>{
     
+    //     console.log(stageHeight)
+    // },[stageHeight])
+    // const [option_width,setOption_width] = useState(346)
+
+
     useEffect(()=>{
-    
-        console.log(stageHeight)
-    },[stageHeight])
+        const len = small_menu_option.length
+        const small_menu_optionView_ = []
+        const bar_width = ((option_width_default-(option_gap*(len-1)))/len)
+        // const gap_width = (option_gap/(len-1))
+
+        const makemenu = () =>{ small_menu_option.map((item,index)=>{
+            small_menu_optionView_.push(
+                <div className='choice-item' key={`choice${index}`} onClick={e=>{
+                    e.preventDefault(); 
+                    option_direction_Handler((bar_width+option_gap)*index)
+                }}>{item}</div>
+            )
+            setSmall_menu_option_View(small_menu_optionView_)
+        })
+
+        // option_width_default
+
+        setOption_width(bar_width)
+
+        }
+
+        makemenu()
+        
+    },[small_menu_option])
+
+
 
     useLayoutEffect(()=>{
 
@@ -178,11 +227,11 @@ export default function List_Menu(probs){
             </div>
                 <div className='container-list-menu-left'>
                     
-                    <div>ALL</div>
-                    <div>전공</div>
-                    <div>교양</div>
-                    <div>시간</div>
-                    <div>학년</div>
+                    <div onClick={ e=>{e.preventDefault(); small_menu_option_handler(0); option_direction_Handler(0)}}>ALL</div>
+                    <div onClick={ e=>{e.preventDefault(); small_menu_option_handler(1); option_direction_Handler(0)}}>전공</div>
+                    <div onClick={ e=>{e.preventDefault(); small_menu_option_handler(2); option_direction_Handler(0)}}>교양</div>
+                    <div onClick={ e=>{e.preventDefault(); small_menu_option_handler(3); option_direction_Handler(0)}}>시간</div>
+                    <div onClick={ e=>{e.preventDefault(); small_menu_option_handler(4); option_direction_Handler(0)}}>학년</div>
 
                 </div>
                 <div id='list-menu-right-search' ref={searchRef}>
@@ -199,17 +248,17 @@ export default function List_Menu(probs){
                                 <span>제목</span>
                                 <span>교수</span>
                             </div>
-                            
                         </div>
-
-                        
                        
                     </div>
-                    
+                        <div className='list-menu-choice-button'>
+                            {small_menu_optionView}
+                            <div className='choice-line' ref={option_direction_Ref} style={{width:`${option_width}px`}}></div>
+                        </div>
                 </div>
                 <div className='container-list-menu-right' ref={RightRef}>
                     <div></div>
-                    <div style={{height :`${stageHeight-140}px`}}>
+                    <div style={{height :`${stageHeight-200}px`}}>
                         {menuItem}
                     </div>
                 </div>
