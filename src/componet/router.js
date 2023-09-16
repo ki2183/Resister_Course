@@ -1,17 +1,13 @@
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import './router.css'
 
-import Home from './home/home';
 import Nav from './nav/nav';
 import Login from './user/login/Login'
 import Usersave from './user/usersave/Usersave';
 import Main from './main/main';
 import MainBanner from './Mainbanner/Mainbanner';
-import Menu from './menu/menu';
-import LastQuestion from './lastquestion/lastquestion';
 import QuestionAll from './question/questionAll';
 import Test from './test/test';
-import MakeQuesitonInput from './question/question_input';
 import Result from './result/result';
 import List from './list/list';
 import Load from './load.js/load';
@@ -21,6 +17,8 @@ import { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import Modal from "react-modal"
 import calcDate from "./routerfuntion"
+
+Modal.setAppElement('#root');
 
 function MAINBANNER(probs){
     return <div>
@@ -123,29 +121,36 @@ function LIST_EDIT(probs){
           if(tableDTO[item[0]][item[1]]==='null'){
             limit.push(true)
             title.push(tableDTO[item[0]][item[1]])
+            console.log(true)
             
           }else{
             limit.push(false)
             title.push(tableDTO[item[0]][item[1]])
+            console.log(false)
           }
         })
+        console.log(limit)
+        // limit.includes(true)
+        const totallimit = limit.includes(false) //과목이 비었다면 true 
+        console.log(totallimit)
+        console.log(title)
+        console.log(title.length)
 
-        const totallimit = limit.includes(true) //과목이 비었다면 true 
-        if(title.length <= 2){
-          if(title[0]===title[1]){
+        if(title.length === 1){
             val = `(${title[0]})`
-          }else{
-            val = `(${title[0]}), (${title[1]})`
-          }
         }else{
-          val = `(${title[0]})`
+          if(title[0] !== 'null' && title[1] !== 'null'){
+            val = `(${title[0]}), (${title[1]})`
+          }else{
+            val = `(${title[0]})`
+          }
         }
+
         
-        if(totallimit===false){
+        if(totallimit===true){
           alert(`같은시간대에 ${val} 이(가) 존재합니다.`)
         }else{
           setTableDTO(Tabletemp)
-
         }
 
         closeMenuModal()
@@ -224,24 +229,31 @@ function LIST_EDIT(probs){
 
       };  
 
-      const changeDTO = (dto) => { //수업 바꾸기 메소드
-        
+      const changeDTO = (dto,tabledto) => { //수업 바꾸기 메소드
+        console.clear()
+        console.log(tableDTO)
+        console.log(tabledto)
         const updateDTO = JSON.parse(JSON.stringify(tableDTO));
-        console.log(dto)
-        calcDate(dto.class_time)
-        openMenuModal()
+        
+
+        // calcDate(dto.class_time)
+        // openMenuModal()
         let limit = false
         let arr = calcDate(dto.class_time)
-        console.log(arr)
+        // console.log(arr)
+ 
         setTempIndex(arr)
         
         for (let i = 0; i < arr.length; i++) {
           let x = arr[i][0];
           let y = arr[i][1];
+          // console.log(i)
           // console.log('x',x)
           // console.log('y',y)
           // console.log(dto.subject_title)
           updateDTO[x][y] = dto.subject_title;
+          console.log(dto.subject_title)
+
           console.log(tableDTO[x][y]==='null')
           
           if(tableDTO[x][y] === 'null') {
@@ -250,6 +262,7 @@ function LIST_EDIT(probs){
             setChangeInfo(dto)
           }
         }
+        console.log(tableDTO)
         console.log(updateDTO)
 
         setTabletemp(updateDTO)
@@ -279,9 +292,13 @@ function LIST_EDIT(probs){
         setTableDTO(tl)
     },[])
 
+    // setTableDTO(Tabletemp)
+    useEffect(()=>{
+      console.log(tableDTO)
+    },[tableDTO])
+
     useEffect(()=>{
         console.log(changeInfo)
-        console.log('qhkfgkaskjfasljkfasjkljklasf')
     },[changeInfo])
 
     return <div className='List_Edit_div'>
@@ -298,6 +315,7 @@ function LIST_EDIT(probs){
           
         </div>
       </Modal>
+
       <Modal style={{ overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
       zIndex:'25'
@@ -336,15 +354,12 @@ function LIST_EDIT(probs){
       </Modal>
       
 
-        <List_Menu menuTF={menuTF} reverseTF={reverseTF} changeDTO={changeDTO}/>
+        <List_Menu menuTF={menuTF} tableDTO={tableDTO} reverseTF={reverseTF} changeDTO={changeDTO}/>
         <List_Edit menuTF={menuTF} tableDTO={tableDTO} del_table_dto={del_table_dto} />
 
         
     </div>
 }
-// const [modalIsMenuOpen, setModalMenuIsOpen] = useState(false);
-    // const openMenuModal = () => setModalMenuIsOpen(true);
-    // const closeMenuModal = () => {setModalMenuIsOpen(false); setTabletemp([]) }
 
 function AppRouter(){
     return <BrowserRouter>
@@ -359,6 +374,7 @@ function AppRouter(){
                 <Route path="/result" element={<RESULT/>}></Route>
                 <Route path="/list" element={<LIST/>}></Route>
                 <Route path="/listedit" element={<LIST_EDIT/>}></Route>
+                <Route path="/test" element={<Test/>}></Route>
             </Routes>
     </BrowserRouter>
 }

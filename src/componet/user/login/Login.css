@@ -48,6 +48,7 @@
    margin: 0;
    margin-left:45px;
    margin-bottom: 8px;
+
 }
 #login-title>h2:nth-child(2){
    padding: none;
@@ -171,7 +172,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   cursor: x;
+   cursor: pointer;
 }
 .login-button-child:nth-child(1){
    background-color: #f0e9e9;

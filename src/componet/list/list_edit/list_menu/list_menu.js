@@ -6,6 +6,9 @@ import { useEffect } from 'react'
 import dto from '../classes/classes.json'
 import './list_menu_modal.css'
 import './scrollbar.css'
+import { forwardRef } from 'react'
+
+
 
 export default function List_Menu(probs){
 
@@ -19,39 +22,57 @@ export default function List_Menu(probs){
     const searchModeRef = useRef(null)
     const [option_width,setOption_width] = useState(option_width_default)
     const option_direction_Ref = useRef(null)
+    const scrollRef =useRef(null)
      
     const [menuItem, setMenuItem] = useState([])
     const [searchMode,setSearchMode] = useState(false)
 
-    const small_menu = [['제목','교수'],['제목','교수'],['제목','교수'],[9,11,13,14,16,17],[1,2,3,4]]
+    const small_menu = [['제목','교수'],['제목','교수'],['제목','교수'],[9,11,13,14,16,17],['all',1,2,3,4]]
     const [small_menu_option,setSmall_menu_option] = useState(['제목','교수'])
     const [small_menu_optionView,setSmall_menu_option_View] = useState([])
 
     const [arrow,setArrow] = useState('▶')
     const [stageHeight,setStageHeight] = useState(window.innerHeight)
 
+    const animation = useRef()
+    
+    const Toggle = () => {
+        animation.current.restart();
+    };
 
     const dateBefore = (date) =>{
         const time = date.slice(0,16)
         return time
-    }
+    } // 첫교시 텍스트
     const dateAfter = (date) =>{
         const time = date.slice(18)
         return time
     }
-
     const modeHandler = () =>{
         setSearchMode(!searchMode)
-    }
+    }// 두 교시 텍스트
 
     const small_menu_option_handler = (index) =>{
         setSmall_menu_option(small_menu[index])
+        scrollbar_ZERO()
+
+    }   // small_menu에 저장되어있는 옵션들 변경
+
+    const scrollbar_ZERO =()=>{
+        console.log(scrollRef.current.scrollTop)
+        if(scrollRef.current.scrollTop>0){
+            gsap.to(scrollRef.current, {
+                scrollTop: 0,
+                duration: 0.5,
+                ease: "easeInOutBounce" 
+            });
+        }
     }
 
     const option_direction_Handler = (n) =>{
-       
         gsap.to(option_direction_Ref.current, { x: n, y: 0, rotate: 0, duration: 0.4 ,ease: "easeInOutBounce" })
-
+        scrollbar_ZERO()
+        Toggle()
     }
 
     useEffect(()=>{
@@ -71,7 +92,7 @@ export default function List_Menu(probs){
             gsap.timeline().to(largeRef.current, {  width:450, duration: 0 ,ease: "easeInOutBounce" })
             setArrow('▶')
         }
-    },[probs.menuTF])
+    },[probs.menuTF]) //gsap 전체
 
     useEffect(()=>{ //검색gsap
         if(searchMode === false){
@@ -79,42 +100,26 @@ export default function List_Menu(probs){
         }else{
             gsap.to(searchModeRef.current, { x: -42, y: 0, rotate: 0, duration: 0.5 ,ease: "easeInOutBounce" })
         }
-    },[searchMode])
+    },[searchMode]) //검색 옵션 tf임
 
     const handleResize = () => {
         setStageHeight(window.innerHeight);
-      };
+    }; //height변경 될때 인지
 
     useEffect(()=>{
-        // console.log(window.innerHeight)
-        // console.log(stageHeight)
 
         window.addEventListener('resize' , handleResize)
         
         return ()=>{
             window.removeEventListener('resize',handleResize)
         }
-    },[])
-
-    // const small_menu = [['제목','교수'],['제목','교수'],[9,11,13,14,16,17],[1,2,3,4]]
-
-    // const [small_menu_option,setSmall_menu_option] = useState(['제목','교수'])
-
-    // const [small_menu_optionView,setSmall_menu_option_View] = useState([])
-
-
-    // useEffect(()=>{
-    
-    //     console.log(stageHeight)
-    // },[stageHeight])
-    // const [option_width,setOption_width] = useState(346)
+    },[]) //resize 이벤트 resize될 때마다 height변경
 
 
     useEffect(()=>{
         const len = small_menu_option.length
         const small_menu_optionView_ = []
         const bar_width = ((option_width_default-(option_gap*(len-1)))/len)
-        // const gap_width = (option_gap/(len-1))
 
         const makemenu = () =>{ small_menu_option.map((item,index)=>{
             small_menu_optionView_.push(
@@ -125,16 +130,12 @@ export default function List_Menu(probs){
             )
             setSmall_menu_option_View(small_menu_optionView_)
         })
-
-        // option_width_default
-
         setOption_width(bar_width)
-
         }
 
         makemenu()
         
-    },[small_menu_option])
+    },[small_menu_option]) //bar 크기 변경 및 정렬 옵션 div삽입
 
 
 
@@ -148,7 +149,7 @@ export default function List_Menu(probs){
         }, 100);
 
         return () => clearTimeout(timeoutId);
-    },[])
+    },[]) // 1300 이하는 menu바가 들어감
 
     useEffect(()=>{
     
@@ -156,7 +157,6 @@ export default function List_Menu(probs){
         const q = []
         
         // const dto_ = dto.data
-
         dto.data.map((item,index) =>{
 
             q.push(item)
@@ -167,7 +167,7 @@ export default function List_Menu(probs){
 
                 menuItems.push(
                     <div className='item-list-menu-right' key={index}>
-                        <div onClick={e=>{e.preventDefault(); console.log(dto1); probs.changeDTO(dto1)}}>
+                        <div onClick={e=>{e.preventDefault(); console.log(dto1); probs.changeDTO(dto1,probs.tableDTO)}}>
                             <span>{q[0].subject_title}</span>
                             <span>담당교수: {q[0].instruction}</span>
                             <span>학점: {q[0].credit}</span>
@@ -175,7 +175,7 @@ export default function List_Menu(probs){
                             { q[0].class_time.length > 17 && (<span>{dateAfter(q[0].class_time)}</span>)}
                         </div>
 
-                        <div onClick={e=>{e.preventDefault(); console.log(dto2); probs.changeDTO(dto2)}}>
+                        <div onClick={e=>{e.preventDefault(); console.log(dto2); probs.changeDTO(dto2,probs.tableDTO)}}>
                             <span>{q[1].subject_title}</span>
                             <span>담당교수: {q[1].instruction}</span>
                             <span>학점: {q[1].credit}</span>
@@ -186,7 +186,7 @@ export default function List_Menu(probs){
                 )
           
                 while (q.length > 0) {
-                    let a = q.pop();
+                    q.pop();
                 }
             }
 
@@ -195,7 +195,7 @@ export default function List_Menu(probs){
             const dto1 = q[0]
             menuItems.push(
                 <div className='item-list-menu-right' key={dto1.id}>
-                        <div onClick={e=>{e.preventDefault(); console.log(dto1); probs.changeDTO(dto1)}}>
+                        <div onClick={e=>{e.preventDefault(); console.log(dto1); probs.changeDTO(dto1,probs.tableDTO)}}>
                             <span>{q[0].subject_title}</span>
                             <span>담당교수: {q[0].instruction}</span>
                             <span>학점: {q[0].credit}</span>
@@ -210,8 +210,10 @@ export default function List_Menu(probs){
                 q.pop();
             }
         }
-        setMenuItem(menuItems)
-    },[])
+
+        const totalItem = <FadeIn stagger={0.05} x={100} ref={animation}>{menuItems}</FadeIn>
+        setMenuItem(totalItem)
+    },[probs.changeDTO])
 
     return (
         <div ref={largeRef} className='container-list-menu'>
@@ -258,8 +260,10 @@ export default function List_Menu(probs){
                 </div>
                 <div className='container-list-menu-right' ref={RightRef}>
                     <div></div>
-                    <div style={{height :`${stageHeight-200}px`}}>
-                        {menuItem}
+                    <div ref ={scrollRef} style={{height :`${stageHeight-200}px`}}>
+                        {/* <FadeIn stagger={0.1} x={100} ref={animation}> */}
+                            {menuItem}
+                        {/* </FadeIn> */}
                     </div>
                 </div>
               
@@ -268,3 +272,28 @@ export default function List_Menu(probs){
         </div>
     )
 }
+
+const FadeIn = forwardRef(({ children, stagger = 0, x = 0 }, ref) => {
+    const el = useRef()
+    const animation = useRef()
+
+    useLayoutEffect(()=>{
+        const ctx = gsap.context(()=>{
+            animation.current = gsap.from(el.current.children,{
+                opacity:0,
+                stagger,
+                x,
+                // duration:1,
+                ease:"easeInOutBounce"
+            })
+        })
+        return () => ctx.revert()
+    },[])
+
+    useEffect(() => {
+        ref.current = animation.current;
+      }, [ref]);
+
+    return <span ref={el}>{children}</span>
+})
+

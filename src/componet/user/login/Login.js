@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 // import axios from "axios";
 import { gsap } from 'gsap';
 import { useEffect, useRef,useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 
 function Login(){
     const [formData, setFormData] = useState({}); // 데이터 저장
@@ -11,6 +13,20 @@ function Login(){
     const pwdRef = useRef(null)
     const { handleSubmit, register, formState: { errors } } = useForm();
     const [focus, setFocus] = useState(false)
+
+    const navigator = useNavigate();
+    
+    const NoneActiveLogin = () =>{
+      navigator('/main', {state:{data:false}})
+    }
+    const ActiveLogin = () =>{
+      navigator('/main', {state:{data:true}})
+    }
+
+
+
+
+
   
     const onsubmit = async dt => {
       await new Promise((r) => setTimeout(r, 1000));
@@ -18,7 +34,8 @@ function Login(){
 
       console.log(JSON.stringify(dt))
       alert(JSON.stringify(dt))
-      window.location.href = '/main'  
+      // window.location.href = '/main'  
+      ActiveLogin()
    
       
   };
@@ -81,7 +98,8 @@ function Login(){
 
   const handleGuestButtonClick = () => {
     alert("비회원으로 사용합니다.");
-    window.location.href = '/main';
+    // window.location.href = '/main';
+    NoneActiveLogin()
   };
 
   useEffect(()=>{

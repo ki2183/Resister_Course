@@ -40,6 +40,17 @@
     justify-content: center;
     gap: 50px;
 }
+.menu-content-none{
+    width: 400px;
+    height:300px;
+    background-color:rgb(202, 202, 202);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 4px #0000006f;
+    justify-content: center;
+    gap: 50px;
+    cursor: no-drop;
+}
 .menu-content:hover{
     cursor: pointer;
 }
