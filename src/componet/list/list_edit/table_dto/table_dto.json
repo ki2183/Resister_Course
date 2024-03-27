@@ -1,0 +1,76 @@
+{ "data":{
+    "timeline":[
+      {
+         "id":11,
+         "grade":"1",
+         "major_classification":"전공선택",
+         "type_of_talent":"",
+         "course_code":"NE115",
+         "category":"A",
+         "subject_title":"확률과통계",
+         "how_to_lesson":"대면",
+         "credit":"3",
+         "instruction":"한근식",
+         "class_time":"월요일(09:30~10:45), 수요일(11:00~12:15)",
+         "classroom":"학번 끝 3자리가 001~045인 학생만 신청 / 전공(복수포함)자 // 전공(복수포함)자",
+         "note":"18106, 18106()"
+      },{
+         "id":13,
+         "grade":"1",
+         "major_classification":"전공선택",
+         "type_of_talent":"",
+         "course_code":"NE115",
+         "category":"C",
+         "subject_title":"확률과통계",
+         "how_to_lesson":"대면",
+         "credit":"3",
+         "instruction":"나경욱",
+         "class_time":"월요일(11:00~12:15), 수요일(09:30~10:45)",
+         "classroom":"학번 끝 3자리가 091~ 학생만 신청 / 컴퓨터공학부 학생만 수강 가능(응용통계학과 수강금지) // 전공(복수포함)자 // 전공(복수포함)자",
+         "note":"18420-1, 18420-1()"
+      },{
+         "id":26,
+         "grade":"3, 4",
+         "major_classification":"전공선택",
+         "type_of_talent":"",
+         "course_code":"NE302",
+         "category":"A",
+         "subject_title":"알고리즘",
+         "how_to_lesson":"대면",
+         "credit":"3",
+         "instruction":"강영경",
+         "class_time":"월요일(13:00~14:15), 수요일(13:00~14:15)",
+         "classroom":"컴퓨터공학부 3, 4학년만 수강 가능 // 전공(복수포함)자",
+         "note":"18314, 18314()"
+      },{
+         "id":27,
+         "grade":"3, 4",
+         "major_classification":"전공선택",
+         "type_of_talent":"",
+         "course_code":"NE302",
+         "category":"B",
+         "subject_title":"알고리즘",
+         "how_to_lesson":"대면",
+         "credit":"3",
+         "instruction":"강영경",
+         "class_time":"월요일(14:30~15:45), 수요일(14:30~15:45)",
+         "classroom":"컴퓨터공학부 3, 4학년만 수강 가능 // 전공(복수포함)자",
+         "note":"18424, 18424()"
+      },{
+         "id":42,
+         "grade":"4",
+         "major_classification":"전공선택",
+         "type_of_talent":"",
+         "course_code":"NE447",
+         "category":"A",
+         "subject_title":"캡스톤디자인1",
+         "how_to_lesson":"대면",
+         "credit":"3",
+         "instruction":"김성기",
+         "class_time":"화요일(13:00~14:15), 화요일(14:30~15:45)",
+         "classroom":"전공(복수포함)자",
+         "note":"18422, 18422()"
+      }
+    ]
+}
+}

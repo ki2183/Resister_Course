@@ -1,0 +1,305 @@
+.container-questionAll{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    gap:20px
+}.title-container-questionAll{
+    padding-top: 60px;
+    width: 100vw;
+    height: 300px;
+    background-color: #302746;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.frame-questionAll{
+    margin-top: 50px;
+    width: 700px;
+    height: auto;  
+}
+.card-questionAll>*{
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.card-questionAll{
+    margin-top: 50px;
+    width: 100%;
+    height: 150px;
+    font-weight: 500;
+    color: rgb(82, 82, 82);
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(163, 163, 163, 0.404);
+}
+.card-question-info{
+    display: flex;
+    /* background-color: blue; */
+
+}
+.card-question-info-span{
+    font-size: 1.4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu-questionAll{
+    width: 100vw;
+    height:400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #332a4b;
+    background-size: contain;
+    background-position: center;
+    
+}
+.menu-title{
+    margin-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: antiquewhite;
+}
+.menu-content-in{
+    margin-top: 10px;
+    width: 800px;
+    height: 200px;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* position: sticky; */
+}
+
+.menu-content-in-div{
+    width: 250px;
+    height: 150px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.content-div-info{
+    width: 80%;
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#forbidden-icon{
+    position:absolute;
+    z-index: 3;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+#hand-icon{
+    position:absolute;
+    top: 40%;
+    left: 48%;
+    transform: translate(-50%, -50%) rotate(20deg);
+
+}
+#clock-icon{
+    position:absolute;
+    top: 45%;
+    left: 50.4%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+#hour-icon{
+    position:absolute;
+    top: 45%;
+    left: 50.4%;
+    transform: translate(-50%, -50%) rotate(40deg);
+    z-index: 1;
+}
+#minute-icon{
+    position:absolute;
+    top: 45%;
+    left: 50.4%;
+    transform: translate(-50%, -50%) ;
+    z-index: 1;
+}#good1-icon{
+    position:absolute;
+    top: 45%;
+    left: 50.4%;
+    transform: translate(-50%, -50%) ;
+    z-index: 1;
+}
+
+.menu-content-in-div:nth-child(1){
+    background-color: rgb(173, 216, 230);
+    /* background-image: url('./mainbg.png'); */
+    position: sticky;
+}
+.menu-content-in-div:nth-child(2){
+    background-color: rgba(224, 255, 255, 0.918);
+    position: sticky;
+}
+.menu-content-in-div:nth-child(3){
+    background-color: rgb(250, 250, 210);
+    position: sticky;
+}
+/* -----------------score--------------------------- */
+
+.card-question-score{
+    width: 700px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5px; */
+
+}
+#input-score{
+    height: 120px;
+}
+.frame-card-question-score{
+    width: 480px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.frame-card-question-score-input{
+    width: 480px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score-radio{
+    width: 60px;
+    height: 60px;
+    border-radius: 500px;
+    cursor: pointer;
+}
+.fstbut{
+    border: 2px solid rgb(64, 74, 228);
+    background-color: rgb(64, 74, 228);;
+
+}
+.secbut{
+    border: 2px solid rgb(64, 149, 228);
+    background-color: rgb(64, 149, 228);
+    width: 45px;
+    height: 45px;
+}
+.trdbut{
+    border: 2px solid rgb(64, 228, 160); 
+    background-color: rgb(64, 228, 160);
+    width: 35px;
+    height: 35px;
+}
+.fourthbut{
+    border: 2px solid rgb(64, 228, 86);
+    background-color: rgb(64, 228, 86);
+    width: 45px;
+    height: 45px;
+}
+.fifthbut{
+    border: 2px solid rgb(228, 212, 64);
+    background-color: rgb(228, 212, 64);
+}
+.input-class-score{
+    width: 25px;
+    height: 30px;
+    border:none;
+    border-bottom: 1px solid #666;
+    outline: none;
+}
+#check_no{
+    background-color: transparent;
+}
+
+
+/* -----------tl----------------- */
+.questionAll-tl{
+    width: 500px;
+    height: auto;
+}
+.test{
+    /* margin-top: 50px; */
+    width: 500px;
+    height: 400px;
+    /* background-color: #332a4b; */
+    position:sticky;
+    top: 0;
+}
+.frame-tl{
+    width: 500px;
+    height: 300px;
+    /* background-color: #ff0000; */
+    /* border: 3px solid #302746; */
+    position: absolute;
+    bottom: 0; /* 맨 아래에 붙도록 설정 */
+}
+
+#submitButton{
+    width: 100%;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #302746;
+    border: 0px;
+    border-radius: 3px;
+    color: antiquewhite;
+    font-size: 25px;
+    font-weight: bold;
+    /* box-shadow: 1px 1px 3px solid #1c1729; */
+  }
+
+/* -----------------------button--------------------------- */
+
+.frame-questionAll-button{
+ 
+ 
+    margin: 30px;
+    width: 1000px;
+    height: 40px;
+    /* background-color: #302746; */
+    margin-left: -150px;
+    display: flex;
+
+}
+
+.frame-questionAll-button>button{
+    margin-left: auto;
+    width: 200px;
+    border:none;
+    box-shadow: 2px 2px 4px #072b35af;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #1c1729;
+    color:antiquewhite;
+
+}
+.view-test{
+    width: 600px;
+    height: 400px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.815);
+    left: 1%;
+    top: 8%;
+    font-size: 12px;
+}
+.test-item{
+    width: 100%;
+}
+
+/* ------------------------------ */
+/* 출처 <a href="https://kr.freepik.com/free-photo/white-smooth-textured-paper-background_15440845.htm#from_view=detail_alsolike">작가 rawpixel.com</a> 출처 Freepik */

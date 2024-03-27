@@ -1,0 +1,45 @@
+:root{
+    --ynfst:#e64e4e;
+    --ynsec:#77d3b4;
+}
+
+.frame-question_yn-val {
+    width: 205px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}   
+
+.fst-button_yn>button{
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--ynfst);
+}.sec-button_yn>button{
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--ynsec);
+
+}
+
+/* ------------------------ */
+
+
+.fst-button_yn:hover button{
+    background-color:  var(--ynfst);
+
+}.sec-button_yn>button:hover{
+    background-color:  var(--ynsec);
+}
+
+.fst-button_yn.Active>button{
+    background-color: var(--ynfst);
+    width: 45px;
+    height: 45px;
+}
+.sec-button_yn.Active>button{
+    background-color: var(--ynsec);
+    width: 45px;
+    height: 45px;
+}

@@ -1,0 +1,1130 @@
+[
+    {
+       "course_code":"KY994-B2",
+       "subject_title":"중급영어회화2",
+       "credit":2,
+       "class_time":"월(14:30~15:45)수(14:30~15:45)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA21-A",
+       "subject_title":"물리란무엇인가",
+       "credit":3,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "physics",
+          "math"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA31-A",
+       "subject_title":"기초독일어실습Ⅱ",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "jp",
+          "communication",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA37-A",
+       "subject_title":"심리와교육",
+       "credit":3,
+       "class_time":"월(13:00~14:15)",
+       "properties":[
+          "mentality"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA44-A",
+       "subject_title":"돈과인간",
+       "credit":3,
+       "class_time":"화(16:00~17:15)화(17:30~18:45)",
+       "properties":[
+          "economy",
+          "math"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA56-A",
+       "subject_title":"소통과의사결정과정",
+       "credit":3,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA59-A",
+       "subject_title":"연기예술2:관찰",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "acting"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA60-A",
+       "subject_title":"연기와마음치료",
+       "credit":3,
+       "class_time":"목(16:00~17:15)목(17:30~18:45)",
+       "properties":[
+          "acting",
+          "mentality"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA91-A",
+       "subject_title":"남북한사회문화의이해",
+       "credit":3,
+       "class_time":"목(16:00~17:15)목(17:30~18:45)",
+       "properties":[
+          "north_korea",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA93-A",
+       "subject_title":"전환기시대의리더십",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "leadership",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA96-A",
+       "subject_title":"과학의위대한순간들",
+       "credit":3,
+       "class_time":"화(16:00~17:15)화(17:30~18:45)",
+       "properties":[
+          "physics",
+          "history"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA97-A",
+       "subject_title":"공공미술과도시재생",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "city",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC10-A",
+       "subject_title":"한국현대생활사",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC11-A",
+       "subject_title":"도시의역사",
+       "credit":3,
+       "class_time":"금(13:00~14:15)금(14:30~15:45)",
+       "properties":[
+          "city"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC14-A",
+       "subject_title":"빅데이터분석기초",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "computer",
+          "math"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC15-A",
+       "subject_title":"21세기사회와유대인의문화",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "eu",
+          "culture",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC16-A",
+       "subject_title":"21세기대안사회모델독일",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "eu",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC17-A",
+       "subject_title":"오르간연주법2",
+       "credit":2,
+       "class_time":"월(13:00~14:40)",
+       "properties":[
+          "music",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC28-A",
+       "subject_title":"창의력은어디서오는가",
+       "credit":3,
+       "class_time":"화(16:00~17:15)화(17:30~18:45)",
+       "properties":[
+          "creativity"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC37-A",
+       "subject_title":"디지털사회와e스포츠",
+       "credit":3,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "game"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC38-A",
+       "subject_title":"문화적상상력과몸의이미지",
+       "credit":3,
+       "class_time":"월(14:30~15:45)수(14:30~15:45)",
+       "properties":[
+          "self_developement"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC42-A",
+       "subject_title":"유럽영화예술의세계",
+       "credit":3,
+       "class_time":"수(14:30~15:45)",
+       "properties":[
+          "movie"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC51-A",
+       "subject_title":"뉴노멀시대지식과정보",
+       "credit":3,
+       "class_time":"화(16:00~17:15)화(17:30~18:45)",
+       "properties":[
+          "knowledge"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC52-A",
+       "subject_title":"유라시아문명과미래세계",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "eu"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC59-A",
+       "subject_title":"마음돌봄과힐링",
+       "credit":3,
+       "class_time":"화(13:00~14:15)목(13:00~14:15)",
+       "properties":[
+          "self_developement"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC60-A",
+       "subject_title":"먼나라이웃나라",
+       "credit":3,
+       "class_time":"월(09:30~10:45)수(11:00~12:15)",
+       "properties":[
+          "self_developement"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC61-A",
+       "subject_title":"어서와한국은처음이지",
+       "credit":3,
+       "class_time":"월(11:00~12:15)수(09:30~10:45)",
+       "properties":[
+          "self_developement"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC62-A",
+       "subject_title":"글로벌이슈:테크,머니,웰빙",
+       "credit":3,
+       "class_time":"화(11:00~12:15)목(09:30~10:45)",
+       "properties":[
+          "self_developement"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC63-A",
+       "subject_title":"책읽기와말하기",
+       "credit":3,
+       "class_time":"화(16:00~17:15)화(17:30~18:45)",
+       "properties":[
+          "reading",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC63-B",
+       "subject_title":"책읽기와말하기",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "reading",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC63-C",
+       "subject_title":"책읽기와말하기",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "reading",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC63-D",
+       "subject_title":"책읽기와말하기",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "reading",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC63-E",
+       "subject_title":"책읽기와말하기",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "reading",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC64-A",
+       "subject_title":"발표하기와토론하기",
+       "credit":3,
+       "class_time":"금(09:30~10:45)금(11:00~12:15)",
+       "properties":[
+          "debate",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC67-A",
+       "subject_title":"미디어일본어",
+       "credit":3,
+       "class_time":"월(16:00~17:15)수(17:30~18:45)",
+       "properties":[
+          "jp",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC71-A",
+       "subject_title":"키워드로보는대중문화",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "knowledge",
+          "media"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC72-A",
+       "subject_title":"알기쉬운세계경제와비즈니스",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "economy"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC74-A",
+       "subject_title":"미술과사회적상상력",
+       "credit":3,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "art"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC75-A",
+       "subject_title":"민주시민과헌법",
+       "credit":3,
+       "class_time":"월(11:00~12:15)수(09:30~10:45)",
+       "properties":[
+          "law"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC76-A",
+       "subject_title":"광고에서배우는창의적문제해결",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "debate",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC77-A",
+       "subject_title":"코드로읽는동북아시아의옛그림",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "art",
+          "lms",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC78-A",
+       "subject_title":"전쟁으로보는한국사",
+       "credit":3,
+       "class_time":"월(16:00~17:15)수(17:30~18:45)",
+       "properties":[
+          "korean_history"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC79-A",
+       "subject_title":"영어로떠나는한국문화",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC80-A",
+       "subject_title":"기악과합주",
+       "credit":2,
+       "class_time":"화(13:00~14:40)",
+       "properties":[
+          "music",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC81-A",
+       "subject_title":"디지털시대의리더십",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "self_developement",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC83-A",
+       "subject_title":"북한미술의어제와오늘",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "art",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY205-A",
+       "subject_title":"초급일본어회화Ⅱ",
+       "credit":1,
+       "class_time":"화(11:00~12:40)",
+       "properties":[
+          "jp"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY206-A",
+       "subject_title":"현대서양사상의길잡이",
+       "credit":3,
+       "class_time":"월(17:30~18:45)수(16:00~17:15)",
+       "properties":[
+          "politics_ideology"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY309-A",
+       "subject_title":"생활속의실용금융",
+       "credit":3,
+       "class_time":"금(13:00~14:15)금(14:30~15:45)",
+       "properties":[
+          "economy"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY447-A",
+       "subject_title":"현대세계정치의이해",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "politics_ideology"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY508-A",
+       "subject_title":"1인미디어만들기",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "media",
+          "computer",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY647-A",
+       "subject_title":"조선왕실의삶과문화",
+       "credit":3,
+       "class_time":"월(14:30~15:45)수(14:30~15:45)",
+       "properties":[
+          "korean_history"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY656-A",
+       "subject_title":"프랑스어회화및실습Ⅱ",
+       "credit":2,
+       "class_time":"월(16:00~17:15)수(17:30~18:45)",
+       "properties":[
+          "eu"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY676-A",
+       "subject_title":"수학으로세상읽기",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "math"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY695-A",
+       "subject_title":"노동의의미",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "social",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY697-A",
+       "subject_title":"민주시민교육",
+       "credit":3,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "social",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY698-A",
+       "subject_title":"수학과문명",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "math",
+          "culture",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY699-A",
+       "subject_title":"물리로보는세계",
+       "credit":3,
+       "class_time":"월(11:00~12:15)수(09:30~10:45)",
+       "properties":[
+          "physics",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY723-A",
+       "subject_title":"내삶을바꿀소설세편",
+       "credit":3,
+       "class_time":"월(11:00~12:15)수(09:30~10:45)",
+       "properties":[
+          "physics"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY735-A",
+       "subject_title":"건축의미학",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "art",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY736-A",
+       "subject_title":"사진예술의이해",
+       "credit":3,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "art"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY748-A",
+       "subject_title":"현대중국의역사적이해",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "china",
+          "history"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY777-A",
+       "subject_title":"현대인의정신건강",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "mentality"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY780-A",
+       "subject_title":"초급일본어Ⅱ",
+       "credit":2,
+       "class_time":"화(13:00~14:15)목(13:00~14:15)",
+       "properties":[
+          "jp"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY786-A",
+       "subject_title":"뉴턴과근대과학탄생의비밀",
+       "credit":3,
+       "class_time":"월(09:30~10:45)수(11:00~12:15)",
+       "properties":[
+          "physics",
+          "math"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY800-A",
+       "subject_title":"구급과안전교육",
+       "credit":2,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "self_developement"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY806-A",
+       "subject_title":"현대환경문제의이해",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "environment",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY836-A",
+       "subject_title":"봉사활동Ⅱ",
+       "credit":1,
+       "class_time":"-",
+       "properties":[
+          "volunteer",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY843-A",
+       "subject_title":"중국어Ⅱ",
+       "credit":2,
+       "class_time":"화(13:00~14:15)목(13:00~14:15)",
+       "properties":[
+          "china",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY845-A",
+       "subject_title":"중국어회화Ⅱ",
+       "credit":2,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "china"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY862-A",
+       "subject_title":"인간관계와예절",
+       "credit":2,
+       "class_time":"목(16:00~17:15)목(17:30~18:45)",
+       "properties":[
+          "self_developement",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY864-A",
+       "subject_title":"영화와사회심리",
+       "credit":3,
+       "class_time":"화(16:00~17:15)화(17:30~18:45)",
+       "properties":[
+          "movie",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY899-A",
+       "subject_title":"독일문학길잡이",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "eu",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY931-A",
+       "subject_title":"재미있는정신분석이야기",
+       "credit":3,
+       "class_time":"월(14:30~15:45)수(14:30~15:45)",
+       "properties":[
+          "mentality",
+          "reading"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY951-A",
+       "subject_title":"일본문학길잡이",
+       "credit":3,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "jp",
+          "reading"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY953-A",
+       "subject_title":"서양미술의감상과이해",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "art",
+          "reading",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY961-A",
+       "subject_title":"결혼과가족",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY972-A",
+       "subject_title":"예술로말하기2",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "communication",
+          "art"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY977-A",
+       "subject_title":"문화콘텐츠로만나는정조",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "korean_history",
+          "culture",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-A1",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"월(09:30~10:45)수(11:00~12:15)",
+       "properties":[
+          "english",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-A2",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"월(11:00~12:15)수(09:30~10:45)",
+       "properties":[
+          "english",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-A3",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"화(09:30~10:45)목(11:00~12:15)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-B1",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"월(11:00~12:15)수(09:30~10:45)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-B2",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-B3",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"화(11:00~12:15)목(09:30~10:45)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-B4",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"화(13:00~14:15)목(13:00~14:15)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-C1",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"월(09:30~10:45)수(11:00~12:15)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-C2",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-C3",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"화(09:30~10:45)목(11:00~12:15)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY992-C4",
+       "subject_title":"기초영어회화2",
+       "credit":2,
+       "class_time":"화(11:00~12:15)목(09:30~10:45)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY994-A1",
+       "subject_title":"중급영어회화2",
+       "credit":2,
+       "class_time":"월(09:30~10:45)수(11:00~12:15)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY994-A2",
+       "subject_title":"중급영어회화2",
+       "credit":2,
+       "class_time":"월(11:00~12:15)수(09:30~10:45)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY994-B1",
+       "subject_title":"중급영어회화2",
+       "credit":2,
+       "class_time":"월(13:00~14:15)수(13:00~14:15)",
+       "properties":[
+          "english",
+          "communication"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC41-A",
+       "subject_title":"나를찾아떠나는여행",
+       "credit":2,
+       "class_time":"금(17:30~19:10)",
+       "properties":[
+          "english"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC24-A",
+       "subject_title":"플랫폼시대의상상력과브랜딩",
+       "credit":3,
+       "class_time":"화(13:00~14:15)화(14:30~15:45)",
+       "properties":[
+          "english",
+          "self_developement"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC26-A",
+       "subject_title":"5주만행렬에집중",
+       "credit":1,
+       "class_time":"-",
+       "properties":[
+          "self_developement"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC27-A",
+       "subject_title":"조직과리더십사례",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "leadership",
+          "lms",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC31-A",
+       "subject_title":"빅데이터분석실습",
+       "credit":3,
+       "class_time":"화(16:00~17:15)화(17:30~18:45)",
+       "properties":[
+          "computer",
+          "math"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC39-A",
+       "subject_title":"세계도시와시민",
+       "credit":3,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "city",
+          "culture"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY984-A",
+       "subject_title":"멀티미디어영어",
+       "credit":3,
+       "class_time":"월(14:30~15:45)수(14:30~15:45)",
+       "properties":[
+          "english",
+          "culture"
+          ,"lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY821-A",
+       "subject_title":"탁구",
+       "credit":2,
+       "class_time":"목(09:30~10:45)목(11:00~12:15)",
+       "properties":[
+         "gym"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY819-A",
+       "subject_title":"배구",
+       "credit":2,
+       "class_time":"수(13:00~14:15)수(14:30~15:45)",
+       "properties":[
+         "gym"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY827-A",
+       "subject_title":"조깅과워킹",
+       "credit":2,
+       "class_time":"수(16:00~17:15)수(17:30~18:45)",
+       "properties":[
+         "gym"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY822-A",
+       "subject_title":"배드민턴",
+       "credit":2,
+       "class_time":"목(13:00~14:15)목(14:30~15:45)",
+       "properties":[
+          "gym"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY209-A",
+       "subject_title":"기업가정신및창업실무",
+       "credit":2,
+       "class_time":"-",
+       "properties":[
+          "employment"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY831-H",
+       "subject_title":"취창업스쿨2",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYC01-A",
+       "subject_title":"좋은기업찾기프로젝트",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "lms"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY831-G",
+       "subject_title":"취창업스쿨2",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY831-A",
+       "subject_title":"취창업스쿨2",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY831-B",
+       "subject_title":"취창업스쿨2",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY831-C",
+       "subject_title":"취창업스쿨2",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY831-D",
+       "subject_title":"취창업스쿨2",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY831-E",
+       "subject_title":"취창업스쿨2",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY831-F",
+       "subject_title":"취창업스쿨2",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KYA52-A",
+       "subject_title":"직업기초능력과현장실습",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "p\/np"
+       ], "value": 0
+    },
+    {
+       "course_code":"KY603-A",
+       "subject_title":"NCS직업기초능력다지기",
+       "credit":3,
+       "class_time":"-",
+       "properties":[
+          "employment",
+          "lms"
+       ], "value": 0
+    }
+ ]

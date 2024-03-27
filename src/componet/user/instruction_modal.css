@@ -1,0 +1,94 @@
+.container-instruction-modal{
+    width: 450px;
+    height:600px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}.instruction-modal>div{
+    width: 900px;
+    height:600px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}.instruction-div{
+    width: 100%;
+    height: 120px;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.instruction-div>span:first-child{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.instruction-div>div>span{
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 10px; */
+}
+.instruction-div>div>span:first-child{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    font-size: 13px;
+}
+.instruction-div>div>span:first-child:hover{
+    color: rgb(17, 17, 138);
+}
+.instruction-div>div{
+    font-size: 20px;
+    margin-left: 40px;
+
+    margin-top: 10px;
+}
+.info-img{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: aliceblue;
+    width: 900px;
+    height: 454px;
+}
+#info-img1{
+    background-image: url(./modalIMG/info1.png);
+}
+#info-img2{
+    background-image: url(./modalIMG/info2.png);
+}
+#info-img3{
+    background-image: url(./modalIMG/info3.png);
+}
+#info-img4{
+    background-image: url(./modalIMG/info4.png);
+}
+
+
+#copy-icon{
+    width: 20px;
+    height: 20px;
+    background-image: url('./modalIMG/copy.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-color: black; */
+    
+}
+#copy-frame{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    width: 120px;
+    height: 20px;
+    font-size: 13px;
+    color: blue;
+    text-decoration: underline;
+    /* background-color: beige; */
+    cursor: pointer;
+}#copy-frame:hover{
+    color: rgb(17, 17, 138);
+}

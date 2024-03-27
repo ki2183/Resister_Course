@@ -1,0 +1,16 @@
+.container-major-count{
+    margin-top: 50px;
+    width: 700px;
+    height: 150px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 2px 2px 4px #072b35af;
+}
+.frame-major-count{
+    display: flex;
+    gap: 15px;
+}

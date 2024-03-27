@@ -1,0 +1,245 @@
+{
+    "data":[
+      {
+        "type":"score",
+        "question":"나는 수학적 추론과 문제 해결, 계산하는 것에 거부감이 없다.",
+        "name":"math",
+        "properties":["math"],
+        "value":0,
+        "Rank":1
+      },{
+        "type":"score",
+        "question":"나는 물리계의 운동을 이해할 수 있는 논리적인 사고와 수리력이 있다.",
+        "name":"physics",
+        "properties":["physics"],
+        "value":0,
+        "Rank":2
+      },{
+        "type":"score",
+        "question":"나는 컴퓨터 언어를 이용해 문제 해결, 계산 하는 것에 관심이 있다.",
+        "name":"computer",
+        "properties":["computer"],
+        "value":0,
+        "Rank":0
+      },{
+        "type":"score",
+        "question":"의사결정, 리더십, 창의력 등과 같은 역량을 향상시키고 싶다.",
+        "name":"self_Development",
+        "properties":["creativity","leadership"],
+        "value":0,
+        "Rank":4
+      },{
+        "type":"score",
+        "question":"나는 현재 경제 상황에 대한 관심이 있다.",
+        "name":"economy",
+        "properties":["economy"],
+        "value":0,
+        "Rank":3
+      },{
+        "type":"score",
+        "question":"나는 현대 사회와 정치, 환경 문제 등에 대해 자주 고민한다.",
+        "name":"social",
+        "properties":["politics_ideology","environment"],
+        "value":0,
+        "Rank":10
+      },{
+        "type":"score",
+        "question":"한국의 역사와 문화에 대한 관심을 가지고 있다.",
+        "name":"history",
+        "properties":["north_korea","korean_history"],
+        "value":0,
+        "Rank":9
+      
+      },{
+        "type":"score",
+        "question":"영어회화를 공부하고자 하는 마음이 있다.",
+        "name":"international",
+        "properties":["english"],
+        "value":0,
+        "Rank":11
+      },{
+        "type":"score",
+        "question":"나는 동아시아 문화나 역사에 관심을 가지고 있다.",
+        "name":"culture",
+        "properties":["jp","china"],
+        "value":0,
+        "Rank":12
+      },{
+        "type":"score",
+        "question":"나는 유럽의 문화나 역사에 관심을 가지고 있다.",
+        "name":"construct",
+        "properties":["eu"],
+        "value":0,
+        "Rank":13
+      },{
+        "type":"score",
+        "question":"사회 문화, 디지털 시대, 문화 콘텐츠, 시민 관점 등 다양한 주제에 관심을 가지고 있다.",
+        "name":"religion",
+        "properties":["media","culture"],
+        "value":0,
+        "Rank":14
+      },{
+        "type":"score",
+        "question":"나는 타인이나 자신의 심리,정신 분석에 대한 관심이 있다.",
+        "properties":["mentality"],
+        "name":"mentality",
+        "value":0,
+        "Rank":15
+      },{
+        "type":"score",
+        "question":"체육 활동을 통해 스트레스 해소나 건강을 챙긴다.",
+        "name":"exercise",
+        "properties":["gym"],
+        "value":0,
+        "Rank":5
+      },{
+        "type":"score",
+        "question":"나는 악기연주를 할 줄 안다.",
+        "name":"music",
+        "properties":["music"],
+        "value":0,
+        "Rank":8
+      },{
+        "type":"score",
+        "question":"미술, 사진 등 다양한 예술 형태에 관심을 가지고 있다.",
+        "name":"art",
+        "properties":["art"],
+        "value":0,
+        "Rank":7
+      },{
+        "type":"score",
+        "question":"나는 연기 예술에 대한 깊은 관심을 가지고 있다.",
+        "name":"exercise",
+        "properties":["acting"],
+        "value":0,
+        "Rank":5
+      },{
+        "type":"score",
+        "question":"나는 문학 작품들을 즐겨 읽는다.",
+        "name":"exercise",
+        "properties":["reading"],
+        "value":0,
+        "Rank":5
+      },{
+        "type":"score",
+        "question":"나는 평소에 게임을 즐긴다.",
+        "name":"exercise",
+        "properties":["game"],
+        "value":0,
+        "Rank":5
+      },{
+        "type":"score",
+        "question":"평소 법에 대해 관심이 있다.",
+        "name":"exercise",
+        "properties":["law"],
+        "value":0,
+        "Rank":5
+      },{
+        "type":"score",
+        "question":"나는 영화를 좋아하며 다양한 시각으로 영화를 알고싶다.",
+        "name":"moive",
+        "properties":["movie"],
+        "value":0,
+        "Rank":10
+      },{
+        "type":"score",
+        "question":"타인과 의견을 교환하고 논의하는 것을 즐겨한다.",
+        "name":"job",
+        "properties":["debate","communication"],
+        "value":0,
+        "Rank":10
+      },{
+        "type":"score",
+        "question":"자기개발과 지식 획득에 대한 열망이 강한편이다.",
+        "name":"job",
+        "properties":["knowledge","self_developement"],
+        "value":0,
+        "Rank":10
+      },{
+        "type":"score",
+        "question":"나는 기업가정신과 창업에 대한 지식과 실무 경험을 알고싶다.",
+        "name":"job",
+        "properties":["employment"],
+        "value":0,
+        "Rank":10
+      }
+      ,{
+        "type":"yn",
+        "question":"나는 필수 교양 [채플]을 들어야한다.",
+        "name":"chapel",
+        "title":"채플",
+        "value":0,
+        "list":[]
+      },{
+        "type":"yn",
+        "question":"나는 필수 교양 [글쓰기의 기초]를 들어야한다.",
+        "name":"writing",
+        "title":"글쓰기의 기초",
+        "value":0,
+        "list":[]
+      },{
+        "type":"yn",
+        "question":"나는 필수 교양 [성서관련교양]을 들어야한다.",
+        "name":"bible",
+        "title":"성서",
+        "value":0,
+        "list":[
+          "KY893-A",
+          "KY893-B",
+          "KY893-C",
+          "KY893-D",
+          "KY894-A",
+          "KY217-A",
+          "KY217-B",
+          "KY217-C",
+          "KY217-D",
+          "KY217-E",
+          "KY217-F",
+          "KY217-G",
+          "KY217-H",
+          "KY217-I"]
+      },{
+        "type":"yn",
+        "question":"나는 필수 교양 [컴퓨터사고와 sw코딩]을 들어야한다.",
+        "name":"coding",
+        "title":"컴퓨터사고와 sw코딩",
+        "value":0,
+        "list":[
+        "KYC56-A4",
+        "KYC56-A5",
+        "KYC56-A6",
+        "KYC56-A7",
+        "KYC56-A8"
+        ]
+      },{
+        "type":"yn",
+        "question":"나는 필수 교양 [영어2]를 들어야한다.",
+        "name":"english",
+        "title":"영어2",
+        "value":0,
+        "list":["KY722-A"]
+      },{
+        "type":"yn",
+        "question":"나는 필수 교양 [사회생활 길잡이]를 들어야한다.",
+        "name":"guide",
+        "title":"사회생활 길잡이",
+        "value":0,
+        "list":["KY722-A","KY921-A2"]
+      },{
+        "type":"yn",
+        "question":"나는 필수 교양 [진로와 상담]을 들어야한다.",
+        "name":"counseling",
+        "title":"진로와 상담",
+        "value":0,
+        "list":[ 
+          "KY410-AA",
+          "KY410-AB",
+          "KY410-AC",
+          "KY410-AD",
+          "KY410-AE",
+          "KY410-AF",
+          "KY410-AG"
+        ]
+      }
+  ]
+}

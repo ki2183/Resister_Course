@@ -1,0 +1,210 @@
+.container-list-edit{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.container-list-edit-in{
+    width: 100vw;
+    height: auto;
+     /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0,20%);
+
+}.frame-list-edit-in-null{
+    width:330px;
+}
+.frame-list-edit-in>button{
+    width:750px;
+    height: 45px;
+    border: none;
+    font-weight: bold;
+    background-color: var(--pc);
+    color: antiquewhite;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+.frame-list-edit-in>button:hover{
+    /* margin-top: -1px; */
+    background-color: #444052;
+    color: rgb(224, 211, 194);
+}
+
+/* ----------------------------------- */
+
+.frame-list-edit-in{
+    margin-top:30px;
+    width: 950px;
+    height: 700px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+/* ------------------------title--------------------- */
+
+.frame-list-edit-in-title{
+    width: 750px;
+    height: 60px;
+    display: flex; 
+    justify-content:space-between;
+    align-items: end;
+    border-bottom: 1.5px solid rgb(184, 182, 180);
+}
+
+
+.frame-list-edit-in-title>input{
+    border: none;
+    font-size: 30px;
+    height: 100%;
+    width: 90%;
+    outline: none;
+    background-color: transparent;
+    padding-left: 45px;
+    padding-right: 45px;
+
+}
+.frame-arrow{
+    width: 703px;
+    display: flex;
+    /* background-color: #666; */
+    gap: 5px;
+}
+#back-arrow{
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    background-image: url('./back.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.2s;
+}
+#back-arrow:hover{
+    background-color: #666;
+}
+#front-arrow{
+    width: 20px;
+    height: 20px;
+    background-image: url('./front.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.2s;
+}
+#front-arrow:hover{
+    background-color: #666;
+}
+
+
+/* -------right bar 학점이랑 lms, 비대면 강의 관리---------- */
+.container-score-out{
+    width: 750px;
+    height: 155px;
+    overflow: hidden;
+    /* border: 2px solid #bbbbbb; */
+    border-radius: 6px;
+    background-color: rgb(241, 236, 236);
+}
+.container-score{
+    width: 750px;
+    height: 220px;
+    border-radius: 10px;
+    text-align: start;
+    z-index: 10;
+    right: 0;
+    top: 15px;
+    overflow-y: hidden;
+    overflow-x:scroll;
+}
+.container-score>div{
+    width: 1200px;
+    height: 140px;
+    margin-top: 5px;
+    /* text-align: start; */
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* -----------------컨텐츠----------------- */
+
+
+.frame-contentView{
+    width: 155px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 8px;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(100, 100, 100, 0.8);
+    transition: all 0.2s;
+}
+.frame-contentView:hover{
+    margin-top: -2px;
+    box-shadow: 4px 10px 10px rgba(100, 100, 100, 0.8);
+}
+.frame-contentView>span{
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.contentView{
+    width: 90%;
+    height: auto;
+    /* background-color: #666; */
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #666;
+    padding-top: 5px;
+    
+}
+.contentView>span{
+    font-size: 11px;
+    margin-left: 10px;
+    color: #666;
+}.null-span{
+    width: 129.5px;
+    height: 16px;
+}
+
+.frame-contentView:first-child{
+    margin-left: 16px;
+}
+.frame-contentView:last-child{
+    margin-right: 16px;
+}.content-cancle{
+    width: 16px;
+    height: 16px;
+    background-color: rgb(255, 70, 70);
+    border-radius: 100%;
+    margin-top: -100px;
+    margin-left: 130px;
+    font-size: 10px;
+    color: antiquewhite;
+}
+.content-cancle>span{
+    margin-left: 4px;
+    margin-top: -2px;
+}
+

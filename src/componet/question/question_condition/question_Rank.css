@@ -1,0 +1,606 @@
+:root{
+    --rank1 :rgb(189, 218, 224);
+    --rank2 :rgb(185 219 221);
+    --rank3 :#373b53;
+    --rank4 :#2c336e;
+    --rank5 :#0b156d;
+    --rank6 :#664d4d;
+    /* --rank7 :#2c336e; */
+    /* --rank7 :#0b156d;
+    --rank8 :#664d4d; */
+}
+
+.frame-rank{
+    margin-top: 50px;
+    width: 1000px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 22.8fr 0.2fr 13fr;
+    margin-left: -150px;
+    box-shadow: 2px 2px 4px #150735af;
+    opacity: 0;
+}
+.frame-rank>div{
+    /* border: 1px solid black */
+
+}
+.frame-rank>div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.frame-rank>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    /* justify-content: center; */
+}
+
+.frame-rank>div:nth-child(1)>:first-child{
+    width: 90%;
+    height: 50px;
+    /* background-color: black; */
+
+}
+.frame-rank>div:nth-child(1)>:first-child>span{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* ----first-------- -----------------------------------------------------*/
+.frame-rank>div:nth-child(2){
+    width: 90%;
+    height: 95%;
+    border-right: 1px solid #66666673;
+}
+
+
+
+
+.question-choice-option{
+    width: 70%;
+    height: 40px;
+    border: 1px solid #6566;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1.5fr 5fr 1fr ;
+    align-items: center;
+    cursor: grab;
+
+}
+
+.question-choice-option>div:nth-child(1){
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.question-choice-option>div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: bold;
+    height: 30px;
+    border-left: 1px solid#666;
+}
+.question-choice-option>div:nth-child(2)>span{ 
+    margin-left: 15px;
+}
+.question-choice-option>div:nth-child(3){
+    font-weight: bold;
+    color: red;
+    font-size: 11px;
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* --------랭크들--------- */
+.collection-rank{
+    width: 95%;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+}
+.collection-rank>div{
+    width: 90%;
+    height: 95%;
+    box-shadow: 2px 2px 4px #3b3e3fda;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: auto 135.38px;
+    cursor: pointer;
+}
+.collection-rank>div :nth-child(1){
+    display: flex;
+    align-items: center;
+}
+.collection-rank>div :nth-child(1)>span{
+    margin-left: 5px;
+    font-weight: bold;
+}
+.collection-rank>div :nth-child(2){
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.collection-rank>div :nth-child(2)>span{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}   
+
+
+/* --------------rank color------------- */
+
+
+
+
+.collection-rank>div:nth-child(1)>div:nth-child(2){
+    background-color: var(--rank1);
+}
+.collection-rank>div:nth-child(2)>div:nth-child(2){
+    background-color: var(--rank2);
+}
+.collection-rank>div:nth-child(3)>div:nth-child(2){
+    background-color: var(--rank3);
+}
+.collection-rank>div:nth-child(4)>div:nth-child(2){
+    background-color: var(--rank4);
+}
+.collection-rank>div:nth-child(5)>div:nth-child(2){
+    background-color: var(--rank5);
+}
+.collection-rank>div:nth-child(6)>div:nth-child(2){
+    background-color: var(--rank6);
+}
+.collection-rank>div:nth-child(7)>div:nth-child(2){
+    background-color: var(--rank7);
+}
+.collection-rank>div:nth-child(8)>div:nth-child(2){
+    background-color: var(--rank8);
+}
+
+/* ------------------------------ */
+
+
+/* ----------------3--------------------------------------- */
+.frame-rank>div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.frame-rank>div:nth-child(3)>div:nth-child(1){
+    width: 90%;
+    height: 80px;
+    /* background-color: rgba(0, 0, 0, 0.329); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5px; */
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #6666666e;
+
+
+}
+.frame-rank>div:nth-child(3)>div:nth-child(1)>span:nth-child(1){
+    font-size: 23px;
+}
+.frame-rank>div:nth-child(3)>div:nth-child(1)>span:nth-child(2){
+    font-size: 12px;
+    margin-top: 10px;
+}
+.frame-rank>div:nth-child(3)>div:nth-child(1)>span:nth-child(3){
+    font-size: 11px;
+    color: red;
+}
+
+
+.frame-rank-this{
+    width: 80%;
+    height:260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 20px;
+    /* border: 1px solid #666; */
+}
+.replace-null-option{
+    width: 80%;
+    height: 90%;
+    border: 2px dotted #afafaf;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------ICON-------------------------------- */
+/* --------------------ICON-------------------------------- */
+/* --------------------ICON-------------------------------- */
+
+
+.rankIcon{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.day-fst-icon{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 4;
+    left: 45%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+}
+.day-sec-icon{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    left: 70%;
+    top: 30%;
+    transform: translate(-50%,-50%) rotate(-15deg);
+}
+
+.TwoDaysback{
+    transition: 0.4s all;
+}
+.TwoDays1{
+    transition: 0.4s all ease-in-out;
+}.TwoDays2{
+    transition: 0.4s all ease-in-out;
+}
+.ani-day1,.ani-day2{
+    transition: 0.4s all ease-in-out;
+}
+.ani-day1{
+    transform: rotate(10deg);
+}
+.TwoDaysback:hover .TwoDays1{
+    scale: 1.5;
+    top:100%;
+    left: 35%;
+}
+.TwoDaysback:hover .TwoDays2{
+    scale: 1.5;
+    left: 60%;
+    top: 50%;  
+}
+
+.TwoDaysback:hover .ani-day1{
+    transform: rotate(-20deg);
+}
+.TwoDaysback:hover .ani-day2{
+    transform: rotate(45deg);
+}
+/* -------------------animation--------------------- */
+
+
+/* -------------------animation--------------------- */
+.TuesThurback{
+    transition: 0.5s all;
+}
+.TuesThur1{
+    transition: 0.5s all ease-in-out;
+}.TuesThur2{
+    transition: 0.5s all ease-in-out;
+}
+.TuesThurback:hover .TuesThur1{
+    scale: 1.5;
+    /* transform: translate(-85%, 35%) rotate(-15deg); */
+    background-color: #3f297e;
+}
+.TuesThurback:hover .TuesThur2{
+    scale: 1.5;
+    left: 36%;
+    top: 36%;
+    /* transform: rotate(15deg); */
+    background-color: #3f297e;
+}
+/* -------------------animation--------------------- */
+.TuesThurback{
+    transition: 0.5s all;
+}
+.TuesThur1{
+    transition: 0.5s all ease-in-out;
+}.TuesThur2{
+    transition: 0.5s all ease-in-out;
+}
+.TuesThurback:hover .TuesThur1{
+    scale: 1.5;
+    transform: translate(-85%, 35%) rotate(-15deg);
+}
+.TuesThurback:hover .TuesThur2{
+    scale: 1.5;
+    left: 36%;
+    top: 36%;
+    transform: rotate(15deg);
+}
+/* -------------------animation--------------------- */
+.ani-day-icon{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.Monday{
+    background-image: url('./rank_icons/Monday.png');
+
+}
+.Tuesday{
+    background-image: url('./rank_icons/Tuesday.png');
+
+}
+.Wednesday{
+    background-image: url('./rank_icons/Wednesday.png');
+
+}
+.Thursday{
+    background-image: url('./rank_icons/Thursday.png');
+
+}
+.Friday{
+    background-image: url('./rank_icons/Friday.png');
+}.three{
+    background-image: url('./rank_icons/3.png');
+}.four{
+    background-image: url('./rank_icons/4.png');
+}
+
+/* -------spaceIcon---------------- */
+
+.space-icon{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-50%,-50%);
+
+}
+
+.space-Total{
+    background-image: url('./rank_icons/space.png');
+}
+.planet1{
+    transform: translate(-50%, -50%) rotate(-30deg);
+    background-image: url('./rank_icons/planet1.png'); 
+    transition: all 1.3s;
+}
+.planet2{
+    background-image: url('./rank_icons/planet2.png');
+    transition: all 1.7s;
+}
+.planet3{
+    background-image: url('./rank_icons/planet3.png');
+    transition: all 1s;
+}
+.spaceFrame{
+    scale: 1.3;
+    transition: all 0.5s;
+}
+.spaceFrame:hover{
+    scale: 1.5;
+}
+/* 빨강 */
+.spaceFrame:hover .planet1{
+    transform: rotate(45deg); /* 45도로 회전 */
+    transform-origin: center; /* 회전 중심을 가운데로 설정 */
+    transform: translate(-50%, -50%) rotate(180deg) ;
+}
+/* 회색 */
+.spaceFrame:hover .planet2{ 
+    transform: rotate(45deg); /* 45도로 회전 */
+    transform-origin: center; /* 회전 중심을 가운데로 설정 */
+    transform: translate(-50%, -50%) rotate(46deg);
+}
+/* 파랑 */
+.spaceFrame:hover .planet3{
+    transform: rotate(45deg); /* 45도로 회전 */
+    transform-origin: center; /* 회전 중심을 가운데로 설정 */
+    transform: translate(-50%, -50%) rotate(300deg);
+}
+
+
+/* ---------------------------------------------- */
+
+
+.onecssback{
+    transition: all 1s;
+}.onecssback>div:first-child{
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+    transform: rotate(10deg);
+    z-index: 5;
+}
+.onecssback>div:first-child:hover{
+    transform: rotate(25deg);
+    scale: 1.2;
+}
+.day-fst-icon-one{
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        z-index: 4;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    
+}
+.number-fst-icon-one{
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    z-index: 4;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.empty-fill-space{
+    position: absolute;
+    width: 88px;
+    height: 175.99px;
+    left: 0%;
+    top: 50%;
+    z-index: 4;
+    transform: translate(-22%,-50%);
+    background-color: #0000001a;
+}
+.empty-fill{
+    position: absolute;
+    width: 88px;
+    height: 175.99px;
+    left: 50%;
+    top: 59%;
+    z-index: 4;
+    background-color: #1d080841;
+    transform: rotate(66deg);
+}
+.empty-fill2{
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    left: 43%;
+    top: -33%;
+    background-color: #00000027;
+    transform: rotate(283deg);
+    z-index: 0;
+}
+.empty-fill3{
+    position: fixed;
+    width: 150px;
+    height: 200px;
+    left: -21%;
+    top: 31%;
+    z-index: 5;
+    background-color: #00000010;
+    transform: rotate(108deg);
+    z-index: 0;
+}
+
+.empty-fill-fst{
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    left: -21%;
+    top: 31%;
+    z-index: 5;
+    background-color: #00000027;
+    transform: rotate(108deg);
+    z-index: 0;
+}
+.onecssback:hover .day-fst-icon-one{
+  position: absolute; 
+  transform-origin: center;
+}
+
+/* ------------------------------------ */
+
+
+
+/* -------------------------------------------------- */
+
+.time-fst-icon-one{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 180.48px;
+    height: 135.38px;
+    z-index: 4;
+    left: 51%;
+    top: 53%;
+    transform: translate(-50%,-50%);
+}
+.time-sec-icon-one{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 4;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+}
+
+.time-sec-icon-lunch{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 4;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+
+.ground{
+    background-image: url('./rank_icons/night_ground.png');
+}
+.ground2{
+    background-image: url('./rank_icons/dark_ground.png');
+}
+.ground3{
+    background-image: url('./rank_icons/light_ground.png');
+}
+.sun{
+    background-image: url('./rank_icons/sun.png');
+}

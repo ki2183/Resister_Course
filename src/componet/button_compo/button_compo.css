@@ -1,0 +1,35 @@
+.component-button{
+    width: 55px;
+    height: 55px;
+    /* background-color: bisque; */
+    /* align-items: center; */
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.component-button>button{
+    /* position: absolute; */
+    width: 35px;
+    height: 35px;
+    /* width: 43px;
+    height: 43px; */
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    transition: 0.2s all;
+    align-self: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+/* .component-button>button:hover{
+    width: 43px;
+    height: 43px;
+} */
+.componet-button-in-span{
+    transition: 0.2s all;
+    margin-top: 2px;
+    color: #111;
+}

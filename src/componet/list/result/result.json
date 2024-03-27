@@ -1,0 +1,127 @@
+{
+    "data" : [
+        {
+            
+            "title":"시간표1",
+            "timeline":[
+               {
+                  "id":1,
+                  "grade":"1",
+                  "major_classification":"전공선택",
+                  "type_of_talent":"",
+                  "course_code":"NE104",
+                  "category":"A",
+                  "subject_title":"컴퓨터공학개론",
+                  "how_to_lesson":"대면",
+                  "credit":"3",
+                  "instruction":"김대수",
+                  "class_time":"목요일(13:00~14:15), 목요일(14:30~15:45)",
+                  "classroom":"학번 끝 3자리가 001~045인 학생만 신청 // 전공(복수포함)자",
+                  "note":"18422, 18422()"
+               },{
+                  "id":10,
+                  "grade":"1",
+                  "major_classification":"전공선택",
+                  "type_of_talent":"",
+                  "course_code":"NE114",
+                  "category":"C",
+                  "subject_title":"미적분학",
+                  "how_to_lesson":"대면",
+                  "credit":"3",
+                  "instruction":"나경욱",
+                  "class_time":"화요일(11:00~12:15), 목요일(09:30~10:45)",
+                  "classroom":"학번 끝 3자리가 091~ 학생만 신청 / 컴퓨터공학부 학생만 수강 가능(수리금융학과 수강금지) // 전공(복수포함)자",
+                  "note":"20502, 20502()"
+               },{
+                  "id":42,
+                  "grade":"4",
+                  "major_classification":"전공선택",
+                  "type_of_talent":"",
+                  "course_code":"NE447",
+                  "category":"A",
+                  "subject_title":"캡스톤디자인1",
+                  "how_to_lesson":"대면",
+                  "credit":"3",
+                  "instruction":"김성기",
+                  "class_time":"화요일(13:00~14:15), 화요일(14:30~15:45)",
+                  "classroom":"전공(복수포함)자",
+                  "note":"18422, 18422()"
+               },{
+                  "id" : 1058,
+                  "grade": [2,3],
+                  "major_classification" : "전공선택",
+                  "subject_title":"데이터 엔지니어링",
+                  "how_to_lesson":"대면",
+                  "credit":3,
+                  "instruction":"안현",
+                  "class_time" : "화요일(09:30~10:45), 목요일(11:00~12:15)",
+                  "index":[[1,0],[3,1]]
+              }
+                ],
+            "date":"2018-05-15"
+        },{
+            "title":"시간표2",
+            "timeline":[
+               {
+                  "id":75,
+                  "grade":"3",
+                  "major_classification":"전공선택",
+                  "type_of_talent":"",
+                  "course_code":"NI470",
+                  "category":"A",
+                  "subject_title":"컴퓨터네트워크",
+                  "how_to_lesson":"대면",
+                  "credit":"3",
+                  "instruction":"조성호",
+                  "class_time":"월요일(09:30~10:45), 수요일(11:00~12:15)",
+                  "classroom":"전공(복수포함)자",
+                  "note":"18420, 18420()"
+               },{
+                  "id":26,
+                  "grade":"3, 4",
+                  "major_classification":"전공선택",
+                  "type_of_talent":"",
+                  "course_code":"NE302",
+                  "category":"A",
+                  "subject_title":"알고리즘",
+                  "how_to_lesson":"대면",
+                  "credit":"3",
+                  "instruction":"강영경",
+                  "class_time":"월요일(13:00~14:15), 수요일(13:00~14:15)",
+                  "classroom":"컴퓨터공학부 3, 4학년만 수강 가능 // 전공(복수포함)자",
+                  "note":"18314, 18314()"
+               },{
+                  "id":36,
+                  "grade":"3, 4",
+                  "major_classification":"전공선택",
+                  "type_of_talent":"",
+                  "course_code":"NE329",
+                  "category":"A",
+                  "subject_title":"리눅스프로그래밍",
+                  "how_to_lesson":"대면",
+                  "credit":"3",
+                  "instruction":"나근식",
+                  "class_time":"월요일(11:00~12:15), 수요일(09:30~10:45)",
+                  "classroom":"컴퓨터공학부 학생만 수강 가능 // 전공(복수포함)자",
+                  "note":"18422, 18422()"
+               },{
+                  "id":60,
+                  "grade":"2",
+                  "major_classification":"전공선택",
+                  "type_of_talent":"",
+                  "course_code":"NI241",
+                  "category":"B",
+                  "subject_title":"자바프로그래밍",
+                  "how_to_lesson":"대면",
+                  "credit":"3",
+                  "instruction":"이경옥",
+                  "class_time":"월요일(14:30~15:45), 수요일(14:30~15:45)",
+                  "classroom":"전공(복수포함)자",
+                  "note":"18312, 18312()"
+               }
+                ],
+            "date":"2018-08-15"
+        }
+        
+    ]
+}

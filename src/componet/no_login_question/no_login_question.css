@@ -1,0 +1,76 @@
+.container-no-login{
+    width: 400px;
+    height: 500px;
+    box-shadow: 2px 2px 4px #666;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 4px;
+}
+.container-no-login>h2{
+    margin:0;
+}
+
+#prev_info{
+    margin: 0;
+    width: 314px;
+    height: 150px;
+    resize: none;
+    padding: 5px;
+    background-color: transparent;
+}.container-no-login>button{
+    margin-left: 36px;
+    margin-right: auto;
+    margin-top: 8px;
+    background-color: var(--pc);
+    color: antiquewhite;
+    border: none;
+    width: 332px;
+    height: 35px;
+    font-size:20px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #666;
+}
+.nologin-input{
+    width: 304px;
+    height: 30px;
+    /* background-color: rgb(238, 232, 225); */
+    outline: none;
+    border: none;
+    /* border-radius: 9px; */
+    padding-left: 10px;
+    border-bottom: 2px solid #e4d4d4;
+}.student-grade-nologin{
+    width: 100px;
+    height: 35px;
+    margin: 3px;
+    color: var(--pc);
+    font-weight: bold;
+    border: 2px solid #e4d4d4;
+    font-size: 14px;
+    color: #534e4e;
+    border-radius: 4px;
+}
+.nologin-frame{
+    width: 314px;
+    height: 80px;
+}
+
+.ani-div-nologin{
+    position: absolute;
+    margin-top:80.5px;
+    width: 0px;
+    height: 2px;
+    background-color: var(--pc);
+
+}.gap-nologin{
+    width: 50px;
+    height: 10px;
+}

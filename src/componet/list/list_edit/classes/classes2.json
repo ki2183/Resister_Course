@@ -1,0 +1,278 @@
+{
+    "data":[
+        {
+            "id" : 1055,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"삼성을 모으는법",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"김찬호",
+            "class_time" : "월요일(13:00~14:15), 수요일(13:00~14:15)",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "id" : 1056,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"루시드 찬양론",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"조익범",
+            "class_time" : "금요일(09:30~10:45), 금요일(11:00~12:15)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1057,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"물리로 보는 세계",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"정태성",
+            "class_time" : "금요일(13:00~14:15), 금요일(14:30~15:45)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1058,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45), 목요일(11:00~12:15)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1059,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1080,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"0주부터 100주까지",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"김찬호",
+            "class_time" : "월요일(13:00~14:15)"
+        },
+        {
+            "id" : 1056,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"루시드 찬양론",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"조익범",
+            "class_time" : "금요일(09:30~10:45), 금요일(11:00~12:15)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1057,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"물리로 보는 세계",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"정태성",
+            "class_time" : "금요일(13:00~14:15), 금요일(14:30~15:45)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1058,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45), 목요일(11:00~12:15)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1059,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1055,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"삼성을 모으는법",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"김찬호",
+            "class_time" : "월요일(13:00~14:15), 수요일(13:00~14:15)",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "id" : 1056,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"루시드 찬양론",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"조익범",
+            "class_time" : "금요일(09:30~10:45), 금요일(11:00~12:15)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1057,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"물리로 보는 세계",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"정태성",
+            "class_time" : "금요일(13:00~14:15), 금요일(14:30~15:45)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1058,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45), 목요일(11:00~12:15)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1059,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1055,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"삼성을 모으는법",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"김찬호",
+            "class_time" : "월요일(13:00~14:15), 수요일(13:00~14:15)",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "id" : 1056,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"루시드 찬양론",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"조익범",
+            "class_time" : "금요일(09:30~10:45), 금요일(11:00~12:15)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1057,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"물리로 보는 세계",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"정태성",
+            "class_time" : "금요일(13:00~14:15), 금요일(14:30~15:45)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1058,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45), 목요일(11:00~12:15)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1059,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1055,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"삼성을 모으는법",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"김찬호",
+            "class_time" : "월요일(13:00~14:15), 수요일(13:00~14:15)",
+            "index":[[0,0],[2,1]]
+        },
+        {
+            "id" : 1056,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"루시드 찬양론",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"조익범",
+            "class_time" : "금요일(09:30~10:45), 금요일(11:00~12:15)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1057,
+            "grade": [1,2,3,4],
+            "major_classification" : "교양선택",
+            "subject_title":"물리로 보는 세계",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"정태성",
+            "class_time" : "금요일(13:00~14:15), 금요일(14:30~15:45)",
+            "index":[[4,0],[4,1]]
+        },
+        {
+            "id" : 1058,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45), 목요일(11:00~12:15)",
+            "index":[[1,0],[3,1]]
+        },
+        {
+            "id" : 1059,
+            "grade": [2,3],
+            "major_classification" : "전공선택",
+            "subject_title":"데이터 엔지니어링",
+            "how_to_lesson":"대면",
+            "credit":3,
+            "instruction":"안현",
+            "class_time" : "화요일(09:30~10:45)",
+            "index":[[1,0],[3,1]]
+        }
+    ]
+}

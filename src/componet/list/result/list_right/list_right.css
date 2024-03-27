@@ -1,0 +1,121 @@
+.container-list-right-in{
+    width: 100%;
+    height: auto;    
+}
+.container-list-frame{
+    margin-left:auto;
+    margin-right:auto;
+    width: 750px;
+    height: auto;
+    border-radius: 10px;
+    overflow-x: hidden;
+    /* background-color: beige; */
+    border: 1px solid #66666668;;
+    box-shadow: 2px 2px 2px #66666668;
+}
+.list-frame{
+    width: 750px;
+    height: 91.4px;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr;
+    /* border: 1px solid black; */
+    cursor: pointer;
+}
+.list-frame:hover{
+background-color: #1c1729;
+}
+.list-frame:hover .list-right-bottom>span {
+    color: antiquewhite;
+    /* font-weight: bold; */
+}
+.list-frame:hover .list-right-date {
+    color: antiquewhite;
+    /* font-weight: bold; */
+}
+.list-frame>div{
+}
+.list-right-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.odd-list{
+    background-color: rgba(235, 235, 235, 0.632);
+}
+.even-list{
+    background-color: white;
+}.icon-list{
+    margin: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('./dots.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
+.list-right-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.list-right-bottom>span{
+    font-weight: lighter;
+    color: black;
+}
+.list-right-bottom>span:first-child{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.list-right-bottom>span:nth-child(2){
+
+    width: 100%;
+    /* background-color: #ececec; */
+    font-size: 15px;
+    color: #666;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+}
+.list-right-date{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: lighter; 
+   font-size: 15px;
+   color: #666;
+   margin-top: 40px;
+}
+.null-box{
+    height: 50px;
+}
+
+
+
+@media (max-width: 1300px) {
+    .container-list-frame{
+
+        width: 600px;
+
+    }.list-frame {
+        width: 600px;
+        height: 81.4px;
+        display: grid;
+        grid-template-columns: 1fr 8fr 2fr;
+        /* border: 1px solid black; */
+        cursor: pointer;
+    }.list-right-bottom>span:first-child {
+        font-size: 25px;
+        font-weight: lighter;
+    }.list-right-bottom>span:nth-child(2) {
+
+        font-size: 13px;
+
+    }
+    .list-right-bottom>span:nth-child(2){
+        max-width: 390px;
+    }
+  }
