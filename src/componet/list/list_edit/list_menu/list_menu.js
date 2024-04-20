@@ -203,22 +203,22 @@ export default function List_Menu(probs){
     },[]) // 1300 이하는 menu바가 들어감
 
     useEffect(()=>{
-        const getAllsubeject = ()=>{
-            axios.get(`/all/lecture`, {
-                headers: {
-                  'Content-Type': 'application/json'
-                }
-              })
-              .then((res) => {
-                console.log(res.data); // 전송 결과
-                setSubject_DTO(res.data)
-              })
-              .catch((error) => {
-                console.error(error); // 서버 통신 오류
-              });
-        }
+        // const getAllsubeject = ()=>{
+        //     axios.get(`/all/lecture`, {
+        //         headers: {
+        //           'Content-Type': 'application/json'
+        //         }
+        //       })
+        //       .then((res) => {
+        //         console.log(res.data); // 전송 결과
+        //         setSubject_DTO(res.data)
+        //       })
+        //       .catch((error) => {
+        //         console.error(error); // 서버 통신 오류
+        //       });
+        // }
 
-        getAllsubeject();
+        // getAllsubeject();
     },[])
 
     // --------------------------------------메뉴 과목들---------------------------------------------
@@ -345,18 +345,18 @@ export default function List_Menu(probs){
             // SETAPIVIEW(`/Subject`+api)
             
             // axios.get(`/Subject/${api}`, {
-            axios.get(`/all/lecture`, {
-                headers: {
-                  'Content-Type': 'application/json'
-                }
-              })
-              .then((res) => {
-                console.log(res.data); // 전송 결과
-                setSubject_DTO(res.data)
-              })
-              .catch((error) => {
-                console.error(error); // 서버 통신 오류
-              });
+            // axios.get(`/all/lecture`, {
+            //     headers: {
+            //       'Content-Type': 'application/json'
+            //     }
+            //   })
+            //   .then((res) => {
+            //     console.log(res.data); // 전송 결과
+            //     setSubject_DTO(res.data)
+            //   })
+            //   .catch((error) => {
+            //     console.error(error); // 서버 통신 오류
+            //   });
 
     }
 
