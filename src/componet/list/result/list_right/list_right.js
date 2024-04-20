@@ -170,7 +170,7 @@ export default function List_Right(probs){
         }} onClick={e=>{
           e.preventDefault();
           setDTO(res.data)
-        }}>Test / API</button>
+        }}>클릭 데이터 삽입</button>
         </div>
     )
 }
